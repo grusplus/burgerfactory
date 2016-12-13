@@ -115,6 +115,18 @@ function burger_factory_scripts() {
 add_action( 'wp_enqueue_scripts', 'burger_factory_scripts' );
 
 /**
+ * Enqueue scripts and styles.
+ */
+function burger_factory_limit_first_page_count( $query ) {
+	if(is_main_query() && is_home()){
+		$query->set( 'posts_per_page', 3 );
+	}
+
+}
+add_action( 'pre_get_posts', 'burger_factory_limit_first_page_count' );
+
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

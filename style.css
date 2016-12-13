@@ -43,6 +43,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+
+Colors:
+#BB7243
+#952637
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -262,28 +266,37 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body
-{
-	color: #404040;
+body {
+	color: #4A4A4A;
 	font-family: 'Noto Serif', serif;
 	font-size: 16px;
 	line-height: 1.5;
 }
+
+.entry-content h2,
+.entry-content h3{
+	font-family: 'Noto Serif', serif;
+}
+
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6{
+h6,
+.site-title{
 	clear: both;
 	font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
 	font-weight:500;
 }
 
 .widget,
-.cat-links {
-	clear: both;
+.cat-links,
+.entry-meta,
+.intro,
+.wp-caption-text,
+ul.entry-list-condensed {
 	font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
 	font-weight:400;
 }
@@ -590,9 +603,7 @@ p a{
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	margin-bottom:40px;
-	padding-bottom:40px;
-	border-bottom:1px solid #ccc;
+	margin-bottom:30px;
 	width:220px;
 }
 
@@ -793,6 +804,7 @@ p a{
 }
 
 .site-title{
+	margin-top:0;
 	margin-bottom:0;
 	font-size:20px;
 	font-weight:500;
@@ -870,6 +882,30 @@ p a{
 	color:#4f4f4f;
 }
 
+ul.entry-list-condensed {
+	padding:0;
+	margin:10px 0 60px;
+}
+
+ul.entry-list-condensed li{
+	list-style-type:none;
+	line-height:1.6em;
+	margin:14px 0;
+	font-size:18px;
+}
+
+ul.entry-list-condensed li a{
+	margin-right:10px;
+}
+
+.entry-list-condensed-meta{
+	font-size:12px;
+	font-weight:500;
+	white-space:pre;
+	color:#999;
+	text-transform:uppercase;
+}
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -901,10 +937,70 @@ p a{
 	color:#4f4f4f;
 }
 
+.entry-content{
+	margin-top:0px;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.single h1{
+	font-size:36px;
+	line-height:40px;
+	margin-top:36px;
+	color:#2f2f2f;
+	font-weight:bold;
+}
+
+
+.single .entry-meta{
+	margin:24px 0 0;
+	font-size:14px;
+}
+
+.single .entry-meta, .single .entry-meta a{
+	color:#BB7243;
+	text-decoration:none;
+	border:0;
+	text-transform:uppercase;
+	font-weight:500;
+}
+
+.single .posted-on{
+	float:right;
+}
+
+p.intro{
+	color:#952637;
+	font-size:16px;
+	line-height:1.5em;
+	font-weight:500;
+}
+
+.entry-content h2,
+.entry-content h3 {
+	font-weight:bold;
+	color:#2f2f2f;
+}
+
+.entry-content h2 {
+	margin-top:48px;
+	font-size:24px;
+}
+
+.entry-content h3 {
+	margin-top:40px;
+	font-size:20px;
+}
+
+.entry-content h4 {
+	color:#676767;
+	margin-top:36px;
+	font-size:18px;
+}
+
 
 /*--------------------------------------------------------------
 ## Comments
@@ -954,6 +1050,9 @@ object {
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
+	background-color:#4A4A4A;
+	color:#ccc;
+	border-radius:4px;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
@@ -965,10 +1064,12 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	padding: 18px;
 }
 
 .wp-caption-text {
+	font-size:14px;
+	padding:0 10px;
 	text-align: center;
 }
 
