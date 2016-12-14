@@ -25,9 +25,26 @@ get_header(); ?>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 			<?php
-			elseif(is_front_page()): ?>
-				<h6 class="front-page-category">New</h6>
-			<?php
+			elseif(is_front_page()):
+				$page = get_query_var( 'paged', 1 );
+				if ( $page == 0 ) :
+					?><h6 class="front-page-category">New</h6><?php
+				elseif ( $page < 5 ) :
+					?>
+						<h6 class="front-page-category">Not So New</h6>
+						<a href="/">Reset</a>
+					<?php
+				elseif ( $page < 10 ) :
+					?>
+						<h6 class="front-page-category">Old</h6>
+						<a href="/">Reset</a>
+					<?php
+				elseif ( $page >= 10 ) :
+					?>
+						<h6 class="front-page-category">Way Way Back</h6>
+						<a href="/">Reset</a>
+					<?php
+				endif;
 			endif;
 
 			/* Start the Loop */
