@@ -15,9 +15,10 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'burger-factory' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'burger-factory' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'burger-factory' ), 'burger-factory', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+            This site runs on
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'burger-factory' ) ); ?>">WordPress</a>
+            and uses the theme
+		<?php printf( esc_html__( '%1$s by %2$s.', 'burger-factory' ), '<em>Burger Factory</em>', '<a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

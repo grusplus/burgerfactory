@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<div class="entry-list">
+		<div class="archive-entry-list">
 
 		<?php
 		if ( have_posts() ) : ?>

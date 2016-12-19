@@ -32,17 +32,14 @@ get_header(); ?>
 				elseif ( $page < 5 ) :
 					?>
 						<h6 class="front-page-category">Not So New</h6>
-						<a href="/">Reset</a>
 					<?php
 				elseif ( $page < 10 ) :
 					?>
 						<h6 class="front-page-category">Old</h6>
-						<a href="/">Reset</a>
 					<?php
 				elseif ( $page >= 10 ) :
 					?>
 						<h6 class="front-page-category">Way Way Back</h6>
-						<a href="/">Reset</a>
 					<?php
 				endif;
 			endif;
@@ -57,7 +54,10 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+?>
+	<a href="/article_index">More</a>
+
+<?php
 
 			?></div>
 

@@ -267,15 +267,24 @@ th {
 # Typography
 --------------------------------------------------------------*/
 body {
-	color: #4A4A4A;
-	font-family: 'Noto Serif', serif;
-	font-size: 16px;
-	line-height: 1.5;
+    color: #4A4A4A;
+    font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
+    font-weight:400;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.entry-content h2,
-.entry-content h3{
-	font-family: 'Noto Serif', serif;
+.entry-content,
+.site-description,
+p{
+    font-family: 'Noto Serif', serif;
+}
+
+p.site-title,
+.intro,
+.wp-caption-text
+{
+    font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
 }
 
 
@@ -285,37 +294,24 @@ h3,
 h4,
 h5,
 h6,
-.site-title {
-	clear: both;
-	font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
-	font-weight:500;
-}
-
-.main-navigation,
-.widget,
-.cat-links,
-.entry-meta,
-.intro,
-.wp-caption-text,
-ul.entry-list-condensed,
-.nav-links {
-	font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
-	font-weight:400;
+p.site-title {
+    font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
+    clear: both;
+    font-weight:500;
 }
 
 p {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: 'Raleway', 'Arial', sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+    color: #404040;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 dfn,
@@ -584,10 +580,6 @@ a {
 	border-bottom:1px solid #999;
 }
 
-a:visited {
-	color: #2f2f2f;
-}
-
 a:hover,
 a:focus,
 a:active {
@@ -604,8 +596,8 @@ a:active {
 }
 
 p a{
-	color: #365097;
-	border-bottom-color:#365097;
+	color: #375CC7;
+	border-bottom-color:#cbd7f7;
 }
 
 /*--------------------------------------------------------------
@@ -720,16 +712,9 @@ p a{
 }
 
 .nav-links {
-	text-transform:uppercase;
-	font-size:14px;
 }
 
 .nav-links a{
-	display:inline-block;
-	background-color:#999;
-	padding:8px 20px;
-	border-radius:4px;
-	color:#fff;
 }
 
 /*--------------------------------------------------------------
@@ -836,6 +821,7 @@ p a{
 
 .site-title a{
 	border-width:0;
+	color:#2f2f2f;
 }
 
 .site-description{
@@ -915,7 +901,10 @@ p a{
 
 ul.entry-list-condensed {
 	padding:0;
-	margin:10px 0 60px;
+	margin:20px 0 60px;
+}
+.front-page-category-lists ul.entry-list-condensed {
+	margin-top:10px;
 }
 
 ul.entry-list-condensed li{
@@ -924,6 +913,11 @@ ul.entry-list-condensed li{
 	margin:14px 0;
 	font-size:18px;
 }
+
+ul.entry-list-condensed li:first-child{
+	margin:0px 0;
+}
+
 
 ul.entry-list-condensed li a{
 	margin-right:10px;
@@ -941,6 +935,13 @@ ul.entry-list-condensed li a{
 	font-size:14px;
 }
 
+/*--------------------------------------------------------------
+## Archive pages
+--------------------------------------------------------------*/
+.archive-entry-list .entry-title{
+	font-size:20px;
+	font-weight:400;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -985,6 +986,7 @@ ul.entry-list-condensed li a{
 	font-size:36px;
 	line-height:40px;
 	margin-top:36px;
+	margin-bottom:8px;
 	color:#2f2f2f;
 	font-weight:bold;
 }
@@ -1007,9 +1009,9 @@ ul.entry-list-condensed li a{
 	float:right;
 }
 
-p.intro{
+.intro{
 	color:#952637;
-	font-size:16px;
+	font-size:18px;
 	line-height:1.5em;
 	font-weight:500;
 }
@@ -1034,6 +1036,21 @@ p.intro{
 	color:#676767;
 	margin-top:36px;
 	font-size:18px;
+}
+
+.tag-links{
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:500;
+	color:#999;
+}
+
+.tag-links a{
+	color:#999;
+}
+
+.edit-link{
+	display:none;
 }
 
 
