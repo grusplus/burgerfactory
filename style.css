@@ -28,6 +28,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Layout
 # Elements
 # Forms
+# Sidebar
 # Navigation
 	## Links
 	## Menus
@@ -35,7 +36,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Alignments
 # Clearings
 # Widgets
-# Header
+# Header / Footer
 # Content
 	## Posts and pages
 	## Comments
@@ -43,6 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Grid
 
 Colors:
 #BB7243
@@ -370,37 +372,6 @@ big {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
-.site{
-	width:780px;
-	margin:0 auto 0 auto;
-}
-.content-area {
-	float: right;
-	margin: 0 0 0 -220px;
-	width: 100%;
-}
-.site-main {
-	margin: 0 0 0 240px;
-	width:540px;
-}
-.site-content .widget-area {
-	float: left;
-	overflow: hidden;
-	width: 25%;
-}
-
-.site-footer {
-	clear: both;
-	width: 100%;
-	margin: 60px 0 100px 240px;
-	background-color:#green;
-	font-size:12px;
-	color:#666;
-}
-
-.site-footer a{
-	color:#666;
-}
 
 /*--------------------------------------------------------------
 # Elements
@@ -569,6 +540,15 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.sidebar{
+	border-left: 2px solid #eee;
+	padding:0px 0 0px 24px;
+	margin-left:124px;
+}
+
+/*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -577,13 +557,14 @@ textarea {
 a {
 	color: #2f2f2f;
 	text-decoration:none;
-	border-bottom:1px solid #999;
+	border-bottom:1px solid #bbb;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #952637;
+	color: #1346da;
+	border-bottom:1px solid #1346da;
 }
 
 a:focus {
@@ -596,8 +577,14 @@ a:active {
 }
 
 p a{
-	color: #375CC7;
+	color: #1346da;
 	border-bottom-color:#cbd7f7;
+}
+
+.current_page_item a,
+.current-menu-item a{
+	border-bottom-width:0;
+	font-weight:bold;
 }
 
 /*--------------------------------------------------------------
@@ -806,13 +793,14 @@ p a{
 }
 
 /*--------------------------------------------------------------
-# Header
+# Header / Footer
 --------------------------------------------------------------*/
 .site-header{
-	margin:60px 0;
+	margin:40px 0;
 }
 
 .site-title{
+	display:inline-block;
 	margin-top:0;
 	margin-bottom:0;
 	font-size:20px;
@@ -828,13 +816,20 @@ p a{
 	margin:0;
 	color:#666;
 	font-size:14px;
+	display:inline-block;
+	float:right;
+}
+
+.site-footer{
+	font-size:12px;
+	margin-bottom:60px;
 }
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 3.5em 0;
+	margin: 0 0 0em 0;
 	font-size:16px;
 }
 
@@ -982,6 +977,10 @@ ul.entry-list-condensed li a{
 	margin: 0 0 1.5em;
 }
 
+.post-thumbnail img{
+	border-radius:4px;
+}
+
 .single h1{
 	font-size:36px;
 	line-height:40px;
@@ -1023,13 +1022,13 @@ ul.entry-list-condensed li a{
 }
 
 .entry-content h2 {
-	margin-top:48px;
-	font-size:24px;
+	margin-top:52px;
+	font-size:28px;
 }
 
 .entry-content h3 {
-	margin-top:40px;
-	font-size:20px;
+	margin-top:48px;
+	font-size:24px;
 }
 
 .entry-content h4 {
@@ -1160,4 +1159,164 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33%;
+}
+
+.col-2-sm {
+  width: 12.66%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33%;
+}
+
+.col-5-sm {
+  width: 37.66%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33%;
+}
+
+.col-8-sm {
+  width: 62.66%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33%;
+}
+
+.col-11-sm {
+  width: 87.66%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 60em) { /* 960px */
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
 }

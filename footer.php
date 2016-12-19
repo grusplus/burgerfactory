@@ -13,8 +13,8 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+	<footer id="colophon" class="site-footer row" role="contentinfo">
+		<div class="col-12 site-info">
             This site runs on
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'burger-factory' ) ); ?>">WordPress</a>
             and uses the theme

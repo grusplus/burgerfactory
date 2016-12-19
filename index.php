@@ -15,8 +15,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main row" role="main">
 
+		<div class="col-8">
 		<?php
 		if ( have_posts() ) :
 			?><div class="entry-list"><?php
@@ -54,12 +55,8 @@ get_header(); ?>
 
 			endwhile;
 
-?>
-	<a href="/article_index">More</a>
-
-<?php
-
-			?></div>
+			?><a href="/article_index">More</a>
+			</div>
 
 			<div class="front-page-category-lists"><?php
 				burger_factory_category_list(get_theme_mod('front_page_category_slug_1'));
@@ -74,9 +71,12 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+		</div>
+		<div class="col-4 sidebar">
+		<? get_sidebar(); ?>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
