@@ -296,7 +296,8 @@ h3,
 h4,
 h5,
 h6,
-p.site-title {
+p.site-title,
+p.site-description {
     font-family: 'Raleway', 'Roboto', 'Arial', sans-serif;
     clear: both;
     font-weight:500;
@@ -543,8 +544,7 @@ textarea {
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar{
-	border-left: 2px solid #eee;
-	padding:0px 0 0px 24px;
+	padding:0px 0 0px 60px;
 	margin-left:124px;
 }
 
@@ -597,9 +597,10 @@ p a{
 }
 
 .main-navigation ul {
-	list-style: none;
+	list-style: disc;
 	margin: 0;
 	padding-left: 0;
+	color:#ddd;
 }
 
 .main-navigation li {
@@ -679,23 +680,43 @@ p a{
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
+	margin: 24px 0;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+	margin-bottom:20px;
 }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+	text-align:right;
+}
+
+.comment-navigation .nav-previous::after,
+.posts-navigation .nav-previous::after,
+.post-navigation .nav-previous::after,
+.comment-navigation .nav-next::after,
+.posts-navigation .nav-next::after,
+.post-navigation .nav-next::after {
+	display:block;
+	text-transform:uppercase;
+	color:#999;
+	font-size:12px;
+	font-weight:500;
+}
+
+.comment-navigation .nav-previous::after,
+.posts-navigation .nav-previous::after,
+.post-navigation .nav-previous::after{
+	content: "Previous";
+}
+.comment-navigation .nav-next::after,
+.posts-navigation .nav-next::after,
+.post-navigation .nav-next::after {
+	content: "Next";
 }
 
 .nav-links {
@@ -796,11 +817,10 @@ p a{
 # Header / Footer
 --------------------------------------------------------------*/
 .site-header{
-	margin:40px 0;
+	margin:24px 0 40px 0px;
 }
 
 .site-title{
-	display:inline-block;
 	margin-top:0;
 	margin-bottom:0;
 	font-size:20px;
@@ -812,12 +832,21 @@ p a{
 	color:#2f2f2f;
 }
 
-.site-description{
+.single p.site-title a{
+	color: #444444;
+}
+
+p.site-description{
 	margin:0;
 	color:#666;
 	font-size:14px;
 	display:inline-block;
-	float:right;
+    font-weight:400;
+    color:#952637;
+}
+
+.single p.site-description {
+	color: #999;
 }
 
 .site-footer{
@@ -1049,6 +1078,14 @@ ul.entry-list-condensed li a{
 }
 
 .edit-link{
+	display:none;
+}
+
+div div.sharedaddy{
+	text-align:center;
+}
+
+div div.sharedaddy h3.sd-title{
 	display:none;
 }
 

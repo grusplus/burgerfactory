@@ -16,7 +16,9 @@ function burger_factory_category_list( $slug ) {
 
 	echo "<ul class='entry-list-condensed'>";
 	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
-		echo "<li><a href='" . the_permalink(' ') . "'>";
+		echo '<li><a href="';
+		the_permalink();
+		echo '">';
 		the_title();
 		echo "</a> <br>";
 		echo "<span class='entry-list-condensed-meta'>";
