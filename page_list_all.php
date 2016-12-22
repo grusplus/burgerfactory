@@ -13,7 +13,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main row" role="main">
-		<div class="col-8">
+		<div class="col-3 sidebar">
+		<? get_sidebar(); ?>
+		</div>
+
+		<div class="col-9">
 			<header class="page-header">
 				<h1 class="front-page-category">Index</h1>
 			</header><!-- .page-header -->
@@ -41,9 +45,6 @@ get_header(); ?>
 
 			<?php endforeach; ?>
 		</ul>
-		</div>
-		<div class="col-4 sidebar">
-		<? get_sidebar(); ?>
 		</div>
 
 		</main><!-- #main -->

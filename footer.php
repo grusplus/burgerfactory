@@ -14,11 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer row" role="contentinfo">
-		<div class="col-12 site-info">
-            This site runs on
+        <div class="col-3">
+        </div>
+		<div class="col-9 site-info">
+            Built with
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'burger-factory' ) ); ?>">WordPress</a>
-            and uses the theme
-		<?php printf( esc_html__( '%1$s by %2$s.', 'burger-factory' ), '<em>Burger Factory</em>', '<a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>' ); ?>
+            +
+		  <?php printf( esc_html__( '%1$s', 'burger-factory' ), '<a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>\'s <em>Burger Factory</em> Theme', ''); ?>
+          + Wonder
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
