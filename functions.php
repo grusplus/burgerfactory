@@ -125,6 +125,40 @@ function burger_factory_limit_first_page_count( $query ) {
 }
 add_action( 'pre_get_posts', 'burger_factory_limit_first_page_count' );
 
+/**
+ * Loading the category lists for the homepage
+ *
+ * @return void
+ */
+function burger_factory_tag_list( $slug ) {
+	$query = new WP_Query( array('tag' => $slug, 'posts_per_page' => 4) );
+	$tag = get_term_by( 'slug', $slug, 'post_tag' );
+	echo "<h6 class='front-page-category'>" . $tag->name . "</h6>";
+
+	echo "<ul class='entry-list-condensed'>";
+	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
+		echo '<li><a href="';
+		the_permalink();
+		echo '">';
+		the_title();
+		echo "</a> <br>";
+		echo "<span class='entry-list-condensed-meta'>";
+		$catgories = array();
+
+		// Just in case the tag is the same as the category name, let's not show both
+		foreach( get_the_category() as $post_category ) {
+			if( $post_category->name != $tag->name ) {
+				$catgories[] = $post_category->name;
+			}
+		}
+
+		echo implode(", ", $catgories);
+		echo "</span>";
+		"</li>";
+	endwhile;endif;
+	echo "</ul>";
+}
+
 
 /**
  * Implement the Custom Header feature.
@@ -145,8 +179,3 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/category-loading.php';

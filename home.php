@@ -58,9 +58,9 @@ get_header(); ?>
 			</div>
 
 			<div class="front-page-category-lists"><?php
-				burger_factory_category_list(get_theme_mod('front_page_category_slug_1'));
-				burger_factory_category_list(get_theme_mod('front_page_category_slug_2'));
-				burger_factory_category_list(get_theme_mod('front_page_category_slug_3'));
+				burger_factory_tag_list(get_theme_mod('front_page_tag_slug_1'));
+				burger_factory_tag_list(get_theme_mod('front_page_tag_slug_2'));
+				burger_factory_tag_list(get_theme_mod('front_page_tag_slug_3'));
 			?>
 			</div>
 			<?php

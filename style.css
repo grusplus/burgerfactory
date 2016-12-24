@@ -112,7 +112,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: bold;
+	font-weight: 500;
 }
 
 dfn {
@@ -252,7 +252,7 @@ textarea {
 }
 
 optgroup {
-	font-weight: bold;
+	font-weight: 500;
 }
 
 table {
@@ -430,7 +430,7 @@ li > ol {
 }
 
 dt {
-	font-weight: bold;
+	font-weight: 500;
 }
 
 dd {
@@ -562,8 +562,8 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #1346da;
-	border-bottom:1px solid #1346da;
+	color: #274cce;
+	border-bottom:1px solid #274cce;
 }
 
 a:focus {
@@ -576,8 +576,8 @@ a:active {
 }
 
 p a{
-	color: #1346da;
-	border-bottom-color:#cbd7f7;
+	color: #274cce;
+	border-bottom-color:#bed2f3;
 }
 
 nav .current_page_item a,
@@ -745,7 +745,7 @@ nav .current-menu-item a{
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: bold;
+	font-weight: 500;
 	height: auto;
 	left: 5px;
 	line-height: normal;
@@ -917,6 +917,7 @@ p.site-description{
 	margin-bottom:60px;
 }
 .entry-list .entry-title {
+	font-size:24px;
 	margin-bottom:14px;
 	line-height:1.4em;
 }
@@ -1028,7 +1029,7 @@ ul.entry-list-condensed li ul{
 	margin-bottom:36px;
 }
 
-.single h1{
+.entry-title{
 	font-size:36px;
 	line-height:40px;
 	margin-top:36px;
@@ -1064,7 +1065,6 @@ ul.entry-list-condensed li ul{
 
 .entry-content h2,
 .entry-content h3 {
-	font-weight:bold;
 	color:#2f2f2f;
 }
 
