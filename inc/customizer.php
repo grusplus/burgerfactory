@@ -16,14 +16,60 @@ function burger_factory_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	$wp_customize->add_section( 'front_page', array(
-		'title' => __( 'Front Page Index' ),
-		'description' => __( 'Configure the front page post index.' ),
+		'title' => __( 'Front Page', 'burger-factory' ),
+		'description' => __( 'Configure the front page post index.', 'burger-factory' ),
+	) );
+
+	$wp_customize->add_section( 'details', array(
+		'title' => __( 'Details', 'burger-factory' ),
+		'description' => __( 'Configure the details.', 'burger-factory' ),
 	) );
 
 	$tag_choices = get_tag_choices();
 	$tag_names = array_keys($tag_choices);
 
-	// No categories for some reason? Get outta here.
+	$wp_customize->add_setting( 'front_page_replace_paging', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => true,
+	) );
+
+	$wp_customize->add_control( 'front_page_replace_paging', array(
+		'section'   => 'front_page',
+		'label'     => __( 'Replace Paging with Index Page', 'burger-factory' ),
+		'type'      => 'checkbox'
+	));
+
+	$wp_customize->add_setting( 'front_page_replace_paging_page', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => false,
+	) );
+
+	$wp_customize->add_control( 'front_page_replace_paging_page', array(
+		'type' => 'dropdown-pages',
+		'section' => 'front_page', // Required, core or custom.
+		'label' => __( 'Index Page', 'burger-factory' ),
+		'description' => __( 'Instead of have previous / next paging, you can create an index page with the shortcode included with this theme on a page, and select that page here. Then you can use your posts per page setting to limit the amount of pages on the front. Four is nice!', 'burger-factory' ),
+	));
+
+
+	// Add a setting to customize some copy
+	$wp_customize->add_setting( 'detail_footer_copy', array(
+		'type' => 'theme_mod', // or 'option'
+		'capability' => 'edit_theme_options',
+		'default' => 'True Love',
+	) );
+
+	$wp_customize->add_control( 'detail_footer_copy', array(
+		'type' => 'input',
+		'section' => 'details',
+		'label' => __( 'Footer Copy', 'burger-factory' ),
+		'description' => __( 'WordPress + [Theme Name] + ______', 'burger-factory' ),
+	));
+
+
+	// No categories for some reason? We don't need the rest of this.
 	if (empty($tag_choices)) {
 		return;
 	}
@@ -52,8 +98,8 @@ function burger_factory_customize_register( $wp_customize ) {
 		'choices' => $tag_choices,
 		'priority' => 10, // Within the section.
 		'section' => 'front_page', // Required, core or custom.
-		'label' => __( 'First List Tag' ),
-		'description' => __( 'On the front page, links to the most recent posts from this tag will be shown as a list underneath the new section.' ),
+		'label' => __( 'First List Tag', 'burger-factory' ),
+		'description' => __( 'On the front page, links to the most recent posts from this tag will be shown as a list underneath the new section.', 'burger-factory' ),
 		'active_callback' => 'is_front_page',
 	) );
 
@@ -62,8 +108,8 @@ function burger_factory_customize_register( $wp_customize ) {
 		'choices' => $tag_choices,
 		'priority' => 11, // Within the section.
 		'section' => 'front_page', // Required, core or custom.
-		'label' => __( 'Second List Tag' ),
-		'description' => __( 'Then these will be shown.' ),
+		'label' => __( 'Second List Tag', 'burger-factory' ),
+		'description' => __( 'Then these will be shown.', 'burger-factory' ),
 		'active_callback' => 'is_front_page',
 	) );
 
@@ -72,8 +118,8 @@ function burger_factory_customize_register( $wp_customize ) {
 		'choices' => $tag_choices,
 		'priority' => 12, // Within the section.
 		'section' => 'front_page', // Required, core or custom.
-		'label' => __( 'Third List Tag' ),
-		'description' => __( 'Then these.' ),
+		'label' => __( 'Third List Tag', 'burger-factory' ),
+		'description' => __( 'Then these.', 'burger-factory' ),
 		'active_callback' => 'is_front_page',
 	) );
 

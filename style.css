@@ -1,23 +1,17 @@
 /*
 Theme Name: Burger Factory
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
-Version: 1.0.0
+Theme URI: https://anguswoodman.com/wordpress-theme-burger-factory
+Author: Angus Woodman
+Author URI: https://anguswoodman.com
+Description: Burger Factory is a minimalist theme for writers. It puts focus on the words and has
+options for creating index-style navigation instead of the standard blog flow.
+Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: burger-factory
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Tags: two-columns, left-sidebar, featured-images, sticky-post, theme-options, threaded-comments, translation-ready, blog
 
 Burger Factory is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -40,7 +34,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Content
 	## Posts and pages
 	## Comments
-# Infinite scroll
 # Media
 	## Captions
 	## Galleries
@@ -173,9 +166,15 @@ pre {
 code,
 kbd,
 pre,
-samp {
+samp,
+var {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 0.9em;
+	border:1px solid #f5b4b4;
+	background-color:#f7e2e2;
+	padding:2px 6px;
+	border-radius:2px;
+	margin:0 2px;
 }
 
 button,
@@ -256,14 +255,35 @@ optgroup {
 }
 
 table {
-	border-collapse: collapse;
 	border-spacing: 0;
+	border:1px solid #ccc;
+	border-radius:4px;
+}
+
+thead th{
+	border-bottom:1px dotted #ddd;
+}
+
+tbody td{
+	border-left:1px dotted #ddd;
 }
 
 td,
 th {
-	padding: 0;
+	font-size:14px;
+	padding: 10px 16px;
+	text-align:left;
 }
+
+dt{
+	color:#2f2f2f;
+	font-size:16px;
+}
+
+dd{
+	font-size:16px;
+}
+
 
 /*--------------------------------------------------------------
 # Typography
@@ -349,8 +369,8 @@ kbd,
 tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 14px;
+	font-size: 0.9em;
 }
 
 abbr,
@@ -367,6 +387,16 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+
+pre{
+	border:1px solid #bbbbbb;
+	background-color:#f3f3f3;
+	padding:2px 6px;
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+	margin:0 2px;
 }
 
 
@@ -401,7 +431,13 @@ q:after {
 blockquote,
 q {
 	quotes: "" "";
+	border-left:2px solid #ccc;
+	padding-left:20px;
+	margin-left:20;
+	font-size:16px;
 }
+
+
 
 hr {
 	background-color: #ccc;
@@ -410,9 +446,21 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+table{
+
+}
+
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0px;
+	padding-left:0px;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol{
+	padding-left:24px;
 }
 
 ul {
@@ -423,10 +471,15 @@ ol {
 	list-style: decimal;
 }
 
+.entry-content li{
+	margin-bottom:18px;
+}
+
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left:0px;
 }
 
 dt {
@@ -458,25 +511,21 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border: 0px solid;
 	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
-	font-size: 12px;
-	font-size: 0.75rem;
+	background-color: #696669;
+	color:#fff;
+	font-weight:400;
+	font-size: 16px;
 	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	padding: 10px 12px;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	background-color: #444;
 }
 
 button:focus,
@@ -487,8 +536,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	background-color: #444;
 }
 
 input[type="text"],
@@ -540,6 +588,11 @@ textarea {
 	width: 100%;
 }
 
+.search-form input{
+	margin-bottom:10px;
+	max-width:100%;
+}
+
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
@@ -580,8 +633,8 @@ p a{
 	border-bottom-color:#bed2f3;
 }
 
-nav .current_page_item a,
-nav .current-menu-item a{
+nav .current_page_item>a,
+nav .current-menu-item>a{
 	border-bottom-width:0;
 	font-weight:400;
 }
@@ -591,43 +644,45 @@ nav .current-menu-item a{
 --------------------------------------------------------------*/
 .main-navigation {
 	margin-bottom:30px;
-	width:220px;
 	font-size:16px;
 }
 
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
 	color:#ddd;
+	padding-left:10px;
 }
 
-.main-navigation li {
+.menu ul>li {
+	margin-top:10px;
+}
+
+.menu>ul>li {
 	position: relative;
-	margin-bottom:14px;
+	margin-top:0;
+	margin-bottom:10px;
 }
 
-.main-navigation a {
+.menu li ul li{
+	font-size: 14px;
+	line-height: 22px;
+}
+
+
+
+.sidebar a, .sidebar p {
 	text-decoration: none;
-	font-weight:100;
+	font-weight: 300;
 }
 
 .main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
 }
 
 .main-navigation ul ul a {
-	width: 200px;
 }
 
 .main-navigation ul ul li {
@@ -707,14 +762,20 @@ nav .current-menu-item a{
 	font-weight:500;
 }
 
-.comment-navigation .nav-previous::after,
-.posts-navigation .nav-previous::after,
-.post-navigation .nav-previous::after{
+.posts-navigation .nav-previous {
+	float:right;
+}
+
+.posts-navigation .nav-next {
+	float:left;
+}
+
+.post-navigation .nav-previous::after
+{
 	content: "Previous";
 }
-.comment-navigation .nav-next::after,
-.posts-navigation .nav-next::after,
-.post-navigation .nav-next::after {
+.post-navigation .nav-next::after
+{
 	content: "Next";
 }
 
@@ -865,14 +926,22 @@ p.site-description{
 	color:#9999af;
 }
 
+.not-found h1{
+	margin-top:0;
+}
+
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 0em 0;
-	font-size:16px;
+	font-weight:100;
 }
+
+.widget, .main-navigation{
+	margin: 0 0 4em 0;
+}
+
 
 /* Make sure select elements fit in widgets. */
 .widget select {
@@ -990,6 +1059,8 @@ ul.entry-list-condensed li ul{
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
+	border-left:4px solid #eee;
+	padding-left:20px;
 }
 
 .hentry {
@@ -1036,6 +1107,10 @@ ul.entry-list-condensed li ul{
 	margin-bottom:8px;
 	color:#2f2f2f;
 	font-weight: 500;
+}
+
+.page .entry-title{
+	margin-top:-4px;
 }
 
 
@@ -1122,6 +1197,46 @@ div div.sharedaddy h3.sd-title{
 	display: block;
 }
 
+ul.comment-list{
+	list-style-type:none;
+	margin:0 0 0px 0;
+	padding:0;
+}
+
+li.comment{
+	margin:0 0 60px 0 ;
+	padding:0;
+}
+
+.comment-meta a{
+	border:0;
+}
+
+.comment-metadata a{
+	font-size:12px;
+	color:#999;
+}
+
+.comment .avatar{
+	float:right;
+	position:relative;
+	top:4px;
+}
+
+.comment-content{
+	font-size:14px;
+}
+
+a.comment-reply-link{
+	font-size:14px;
+
+}
+
+.no-comments {
+	margin-bottom:60px;
+	font-size:14px;
+	color:#999;
+}
 
 /*--------------------------------------------------------------
 # Media
@@ -1167,6 +1282,14 @@ object {
 	font-size:14px;
 	padding:0 10px;
 	text-align: center;
+}
+
+.wp-caption-text a{
+	color:#fff;
+}
+
+.wp-caption-text a:hover, .wp-caption-text a:active{
+	border-bottom:1px solid #fff;
 }
 
 /*--------------------------------------------------------------

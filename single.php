@@ -12,7 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main row" role="main">
 		<div class="col-3 sidebar">
-			<? get_sidebar(); ?>
+			<?php get_sidebar(); ?>
 		</div>
 		<div class="col-9">
 			<?php
@@ -20,12 +20,12 @@ get_header(); ?>
 
 				get_template_part( 'template-parts/content', get_post_format() );
 
-				the_post_navigation();
-
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
+
+				the_post_navigation();
 
 			endwhile; // End of the loop.
 			?>

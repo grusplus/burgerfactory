@@ -115,17 +115,6 @@ function burger_factory_scripts() {
 add_action( 'wp_enqueue_scripts', 'burger_factory_scripts' );
 
 /**
- * Enqueue scripts and styles.
- */
-function burger_factory_limit_first_page_count( $query ) {
-	if(is_main_query() && is_home()){
-		$query->set( 'posts_per_page', 3 );
-	}
-
-}
-add_action( 'pre_get_posts', 'burger_factory_limit_first_page_count' );
-
-/**
  * Loading the category lists for the homepage
  *
  * @return void
@@ -133,6 +122,12 @@ add_action( 'pre_get_posts', 'burger_factory_limit_first_page_count' );
 function burger_factory_tag_list( $slug ) {
 	$query = new WP_Query( array('tag' => $slug, 'posts_per_page' => 4) );
 	$tag = get_term_by( 'slug', $slug, 'post_tag' );
+
+	// If no such tags, get outta here.
+	if( !$tag ){
+		return;
+	}
+
 	echo "<h6 class='front-page-category'>" . $tag->name . "</h6>";
 
 	echo "<ul class='entry-list-condensed'>";
@@ -159,11 +154,48 @@ function burger_factory_tag_list( $slug ) {
 	echo "</ul>";
 }
 
+function burger_factory_full_post_list() {
+	$postslist = get_posts( array( 'numberposts' => -1, 'orderby' => 'post_date' ) );
+	$code = '<ul class="entry-list-condensed">';
 
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
+	foreach ($postslist as $post) :  setup_postdata($post);
+		$code .= '<li>';
+		$code .= '<a href="' . get_the_permalink($post) . '">';
+		$code .= get_the_title($post);
+		$code .= '</a> <br>';
+
+		$catgories = array();
+		foreach( get_the_category() as $post_category ) {
+			$catgories[] = $post_category->name;
+		}
+
+		$code .= '<span class="entry-list-condensed-meta">' . implode(", ", $catgories) . '</span>';
+		$code .= '</li>';
+
+	endforeach;
+
+	$code .= '</ul>';
+
+	return $code;
+}
+
+add_shortcode('full_post_list', 'burger_factory_full_post_list');
+
+
+function burger_factory_full_category_list() {
+
+	echo '<ul class="entry-list-condensed">';
+	wp_list_categories( array(
+		'orderby'    => 'count',
+		'order'      => 'DESC',
+		'show_count' => 1,
+		'title_li'   => '',
+		'number'     => 999,
+	) );
+	echo '</ul>';
+}
+
+add_shortcode('full_category_list', 'burger_factory_full_category_list');
 
 /**
  * Custom template tags for this theme.

@@ -1,10 +1,6 @@
 <?php
 /**
- * The header for our theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * The header.
  *
  * @package Burger_Factory
  */
@@ -17,6 +13,18 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i" rel="stylesheet">
 <?php wp_head(); ?>
+
+<?php //Moved out from style.css so they can be translated ?>
+<style type="text/css">
+.post-navigation .nav-previous::after
+{
+	content: "<?php echo __('Previous', 'burger-factory'); ?>";
+}
+.post-navigation .nav-next::after
+{
+	content: "<?php echo __('Next', 'burger-factory'); ?>";
+}
+</style>
 </head>
 
 <body <?php body_class(); ?>>

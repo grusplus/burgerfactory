@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main row" role="main">
 
 		<div class="col-3 sidebar">
-			<? get_sidebar(); ?>
+			<?php get_sidebar(); ?>
 		</div>
 
 		<div class="col-9 archive-entry-list">

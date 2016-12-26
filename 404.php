@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main row" role="main">
 
 			<div class="col-3 sidebar">
-				<? get_sidebar(); ?>
+				<?php get_sidebar(); ?>
 			</div>
 
 			<section class="col-9 error-404 not-found">
