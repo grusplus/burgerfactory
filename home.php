@@ -34,30 +34,30 @@ get_header(); ?>
 			?>
 			<?php
 			/* Start the Loop */
-			// We want the 'new' below the sticky posts, so we'll put it after the first post that
+			// We want the 'new' below the sticky posts, so we'll put it before the first post that
 			// isn't
-			$found_sticky = false;
+			$done_with_stickies = false;
 			while ( have_posts() ) : the_post();
 
-				if(!is_sticky() && $found_sticky == false):
+				if(!is_sticky() && $done_with_stickies == false):
 					$current_page = get_query_var( 'paged', 1 );
 
 					if ( $current_page == 0 ) :
-						?><h6 class="front-page-category"><?php __( 'New', 'burger-factory'); ?></h6><?php
+						?><h6 class="front-page-category"><?php echo __( 'New', 'burger-factory'); ?></h6><?php
 					elseif ( $current_page < 5 ) :
 						?>
-							<h6 class="front-page-category"><?php __( 'Not So New', 'burger-factory'); ?></h6>
+							<h6 class="front-page-category"><?php echo __( 'Not So New', 'burger-factory'); ?></h6>
 						<?php
 					elseif ( $current_page < 10 ) :
 						?>
-							<h6 class="front-page-category"><?php __( 'Old', 'burger-factory'); ?></h6>
+							<h6 class="front-page-category"><?php echo __( 'Old', 'burger-factory'); ?></h6>
 						<?php
 					elseif ( $current_page >= 10 ) :
 						?>
-							<h6 class="front-page-category"><?php __( 'Way Back', 'burger-factory'); ?></h6>
+							<h6 class="front-page-category"><?php echo __( 'Way Back', 'burger-factory'); ?></h6>
 						<?php
 					endif;
-					$found_sticky = true;
+					$done_with_stickies = true;
 				endif;
 
 				get_template_part( 'template-parts/content', 'summary' );
@@ -69,7 +69,7 @@ get_header(); ?>
 			if( $replace_navigation ):
 				$url = get_permalink(get_theme_mod('front_page_replace_paging_page'));
 				?>
-				<a href="<?php echo $url?>"><?php __( 'More', 'burger-factory'); ?></a>
+				<a href="<?php echo $url?>"><?php echo __( 'More', 'burger-factory'); ?></a>
 				<?php
 			else:
 				the_posts_navigation( array('prev_text' => "More", 'next_text' => "Back") );

@@ -164,12 +164,7 @@ function burger_factory_full_post_list() {
 		$code .= get_the_title($post);
 		$code .= '</a> <br>';
 
-		$catgories = array();
-		foreach( get_the_category() as $post_category ) {
-			$catgories[] = $post_category->name;
-		}
-
-		$code .= '<span class="entry-list-condensed-meta">' . implode(", ", $catgories) . '</span>';
+		$code .= '<span class="entry-list-condensed-meta cat-links">' . get_the_category_list( esc_html__( ', ', 'burger-factory' ), "", $post ) . '</span>';
 		$code .= '</li>';
 
 	endforeach;

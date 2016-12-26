@@ -651,11 +651,19 @@ nav .current-menu-item>a{
 	list-style: none;
 	margin: 0;
 	color:#ddd;
+}
+
+.main-navigation ul ul{
 	padding-left:10px;
+
 }
 
 .menu ul>li {
 	margin-top:10px;
+}
+
+.menu li{
+	margin-top:8px;
 }
 
 .menu>ul>li {
@@ -1041,6 +1049,16 @@ ul.entry-list-condensed li ul{
 	color:#999;
 	text-transform:uppercase;
 }
+
+.entry-list-condensed-meta a{
+	font-size:12px;
+	font-weight:500;
+	white-space:pre;
+	color:#999;
+	text-transform:uppercase;
+	border:0;
+}
+
 
 .entry-list .entry-meta{
 	font-size:14px;
