@@ -95,6 +95,17 @@ function burger_factory_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => 'After Entry',
+		'id'            => 'after-entry',
+		'description'   => esc_html__( 'These widgets output after a single post.', 'burger-factory' ),
+		'before_widget' => '<div class="widget after-entry-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
 }
 add_action( 'widgets_init', 'burger_factory_widgets_init' );
 
@@ -191,6 +202,11 @@ function burger_factory_full_category_list() {
 }
 
 add_shortcode('full_category_list', 'burger_factory_full_category_list');
+
+/**
+ * Allow shortcodes in the text widget
+ */
+add_filter('widget_text','do_shortcode');
 
 /**
  * Custom template tags for this theme.

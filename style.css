@@ -558,7 +558,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 6px 8px 4px;
 }
 
 select {
@@ -642,6 +642,8 @@ nav .current-menu-item>a{
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
+
 .main-navigation {
 	margin-bottom:30px;
 	font-size:16px;
@@ -675,6 +677,32 @@ nav .current-menu-item>a{
 .menu li ul li{
 	font-size: 14px;
 	line-height: 22px;
+}
+
+@media only screen and (max-width: 720px) {
+
+	.main-navigation {
+		margin-bottom:24px !important;
+	}
+
+	.single .main-navigation{
+		border-bottom:1px solid #ddd;
+		padding-bottom:24px;
+	}
+
+	.main-navigation li {
+		display:inline-block;
+		margin-right:10px;
+	}
+
+	.sidebar{
+		margin-bottom:0 !important;
+	}
+
+	.site-header{
+		margin-bottom:0 !important;
+	}
+
 }
 
 
@@ -972,6 +1000,19 @@ p.site-description{
 	list-style:none;
 	margin:10px 0;
 	padding:0;
+}
+
+.after-entry-widgets{
+	margin:40px 0 100px;
+	max-width:400px;
+}
+
+.after-entry-widgets h4{
+}
+
+.subscribe-email input{
+	font-size:16px;
+	line-height:18px;
 }
 
 /*--------------------------------------------------------------
@@ -1377,6 +1418,18 @@ object {
   margin-left: auto;
   margin-right: auto;
 }
+
+@media only screen and (max-width: 720px) {
+
+	.container {
+  		width: 94%;
+  		margin-left: auto;
+  		margin-right: auto;
+	}
+
+
+}
+
 
 .row {
   position: relative;

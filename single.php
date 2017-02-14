@@ -25,6 +25,12 @@ get_header(); ?>
 					comments_template();
 				endif;
 
+				if ( is_active_sidebar( 'after-entry' ) ) :
+					?><div class="after-entry-widgets"><?php
+					dynamic_sidebar( 'after-entry' );
+					?></div><?php
+				endif;
+
 				the_post_navigation();
 
 			endwhile; // End of the loop.
@@ -33,6 +39,5 @@ get_header(); ?>
 		</main><!-- #main -->
 
 	</div><!-- #primary -->
-
 <?php
 get_footer();
