@@ -633,6 +633,11 @@ p a{
 	border-bottom-color:#bed2f3;
 }
 
+/* Hides the link border under the image */
+p a img{
+	margin-bottom:-11px;
+}
+
 nav .current_page_item>a,
 nav .current-menu-item>a{
 	border-bottom-width:0;
@@ -1029,6 +1034,7 @@ p.site-description{
 	color:#BB7243;
 	text-transform:uppercase;
 	margin:0px;
+	margin-bottom:40px;
 }
 
 .entry-list .hentry {
@@ -1039,9 +1045,12 @@ p.site-description{
 	margin-bottom:14px;
 	line-height:1.4em;
 }
+.entry-list .cat-links{
+	color:#999;
+}
 .entry-list .cat-links a{
 	border-width:0;
-	color:#A0A0A0;
+	color:#999;
 	text-transform:uppercase;
 }
 
@@ -1109,8 +1118,6 @@ ul.entry-list-condensed li ul{
 ## Archive pages
 --------------------------------------------------------------*/
 .archive-entry-list .entry-title{
-	font-size:18px;
-	font-weight:400;
 }
 
 /*--------------------------------------------------------------
@@ -1162,7 +1169,7 @@ ul.entry-list-condensed li ul{
 .entry-title{
 	font-size:36px;
 	line-height:40px;
-	margin-top:36px;
+	margin-top:0px;
 	margin-bottom:8px;
 	color:#2f2f2f;
 	font-weight: 500;
@@ -1174,7 +1181,7 @@ ul.entry-list-condensed li ul{
 
 
 .single .entry-meta{
-	margin:0px 0 0;
+	margin:0px 0 24px;
 	font-size:14px;
 }
 

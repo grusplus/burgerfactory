@@ -18,43 +18,86 @@ get_header(); ?>
 
 		<div class="col-9 archive-entry-list">
 
-		<?php
-		if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php if ( is_search() ) : ?>
+			<?php if ( is_search() ) : ?>
+				<header class="page-header">
 					<h1 class="front-page-category">
 						<?php printf( esc_html__( 'Search Results for: %s', 'burger-factory' ), '<span>' . get_search_query() . '</span>' ); ?>
 					</h1>
-				<?php else:
-					the_archive_title( '<h1 class="front-page-category">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
+				</header>
+			<?php elseif ( is_archive() ): ?>
+				<header class="page-header">
+				<?php
+				the_archive_title( '<h1 class="front-page-category">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
-				<?php endif; ?>
-			</header><!-- .page-header -->
+				</header><!-- .page-header -->
+			<?php endif; ?>
 
-			<ul class="entry-list-condensed">
+			<div class="entry-list">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<header class="entry-header">
+							<h2 class="entry-title">
+							<?php
+							if( !empty( get_the_title() ) ) :
+								the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );
+							else:
+								echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ) . "Untitled" . '</a>';
+							endif;
+							?>
+							</h2>
+							<?php if ( 'post' === get_post_type() ) : ?>
+							<div class="entry-meta">
+								<?php burger_factory_entry_category(); ?>
+							</div><!-- .entry-meta -->
+							<?php endif; ?>
+						</header><!-- .entry-header -->
+
+						<div class="entry-summary">
+							<?php the_excerpt(); ?>
+						</div><!-- .entry-summary -->
+					</article><!-- #post-## -->
+				<?php endwhile; ?>
+			</div><!-- .entry-header -->
+
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
 
-				the_title( sprintf( '<li><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></li>' );
-
-			endwhile;
-			?>
-			</ul><!-- .entry-header -->
-			<?php
 			the_posts_navigation();
 
-		else :
+		else : ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<section class="no-results not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'burger-factory' ); ?></h1>
+				</header><!-- .page-header -->
 
-		endif; ?>
+				<div class="page-content">
+					<?php
+					if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+
+						<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'burger-factory' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+
+					<?php elseif ( is_search() ) : ?>
+
+						<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'burger-factory' ); ?></p>
+						<?php
+							get_search_form();
+
+					else : ?>
+
+						<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'burger-factory' ); ?></p>
+						<?php
+							get_search_form();
+
+					endif; ?>
+				</div><!-- .page-content -->
+			</section><!-- .no-results -->
+		<?php endif; ?>
 		</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_footer();

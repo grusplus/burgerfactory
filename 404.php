@@ -18,11 +18,11 @@ get_header(); ?>
 
 			<section class="col-9 error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( "Crack?", 'burger-factory' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( "404", 'burger-factory' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( "Either you're smoking it or you found one because there's no page at that location.", 'burger-factory' ); ?></p>
+					<p><?php esc_html_e( "There's no page at this address.", 'burger-factory' ); ?></p>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 		</main><!-- #main -->

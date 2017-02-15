@@ -76,7 +76,7 @@ add_action( 'after_setup_theme', 'burger_factory_setup' );
  * @global int $content_width
  */
 function burger_factory_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'burger_factory_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'burger_factory_content_width', 720 );
 }
 add_action( 'after_setup_theme', 'burger_factory_content_width', 0 );
 
@@ -115,98 +115,11 @@ add_action( 'widgets_init', 'burger_factory_widgets_init' );
 function burger_factory_scripts() {
 	wp_enqueue_style( 'burger-factory-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'burger-factory-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'burger-factory-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'burger_factory_scripts' );
-
-/**
- * Loading the category lists for the homepage
- *
- * @return void
- */
-function burger_factory_tag_list( $slug ) {
-	$query = new WP_Query( array('tag' => $slug, 'posts_per_page' => 4) );
-	$tag = get_term_by( 'slug', $slug, 'post_tag' );
-
-	// If no such tags, get outta here.
-	if( !$tag ){
-		return;
-	}
-
-	echo "<h6 class='front-page-category'>" . $tag->name . "</h6>";
-
-	echo "<ul class='entry-list-condensed'>";
-	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
-		echo '<li><a href="';
-		the_permalink();
-		echo '">';
-		the_title();
-		echo "</a> <br>";
-		echo "<span class='entry-list-condensed-meta'>";
-		$catgories = array();
-
-		// Just in case the tag is the same as the category name, let's not show both
-		foreach( get_the_category() as $post_category ) {
-			if( $post_category->name != $tag->name ) {
-				$catgories[] = $post_category->name;
-			}
-		}
-
-		echo implode(", ", $catgories);
-		echo "</span>";
-		"</li>";
-	endwhile;endif;
-	echo "</ul>";
-}
-
-function burger_factory_full_post_list() {
-	$postslist = get_posts( array( 'numberposts' => -1, 'orderby' => 'post_date' ) );
-	$code = '<ul class="entry-list-condensed">';
-
-	foreach ($postslist as $post) :  setup_postdata($post);
-		$code .= '<li>';
-		$code .= '<a href="' . get_the_permalink($post) . '">';
-		$code .= get_the_title($post);
-		$code .= '</a> <br>';
-
-		$code .= '<span class="entry-list-condensed-meta cat-links">' . get_the_category_list( esc_html__( ', ', 'burger-factory' ), "", $post ) . '</span>';
-		$code .= '</li>';
-
-	endforeach;
-
-	$code .= '</ul>';
-
-	return $code;
-}
-
-add_shortcode('full_post_list', 'burger_factory_full_post_list');
-
-
-function burger_factory_full_category_list() {
-
-	echo '<ul class="entry-list-condensed">';
-	wp_list_categories( array(
-		'orderby'    => 'count',
-		'order'      => 'DESC',
-		'show_count' => 1,
-		'title_li'   => '',
-		'number'     => 999,
-	) );
-	echo '</ul>';
-}
-
-add_shortcode('full_category_list', 'burger_factory_full_category_list');
-
-/**
- * Allow shortcodes in the text widget
- */
-add_filter('widget_text','do_shortcode');
 
 /**
  * Custom template tags for this theme.
