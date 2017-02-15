@@ -42,7 +42,13 @@ get_header(); ?>
 					?></header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<?php
+						<?php if ( has_excerpt() ) : ?>
+							<p class="intro">
+								<?/* Not using the_excerpt() here because we're also outputting the
+								     content and we don't want after post hooks firing twice. */ ?>
+								<?= get_the_excerpt(); ?>
+							</p>
+						<?php endif;
 							the_content( sprintf(
 								/* translators: %s: Name of current post. */
 								wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'burger-factory' ), array( 'span' => array( 'class' => array() ) ) ),

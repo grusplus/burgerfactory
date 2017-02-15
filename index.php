@@ -51,16 +51,21 @@ get_header(); ?>
 							<?php if ( 'post' === get_post_type() ) : ?>
 							<div class="entry-meta">
 								<?php burger_factory_entry_category(); ?>
-							</div><!-- .entry-meta -->
+							</div>
 							<?php endif; ?>
-						</header><!-- .entry-header -->
+						</header>
 
 						<div class="entry-summary">
-							<?php the_excerpt(); ?>
-						</div><!-- .entry-summary -->
-					</article><!-- #post-## -->
+							<?php if ( ! has_excerpt() ) :
+								the_content('More');
+							else :
+								the_excerpt();
+							endif;
+							?>
+						</div>
+					</article>
 				<?php endwhile; ?>
-			</div><!-- .entry-header -->
+			</div>
 
 			<?php
 

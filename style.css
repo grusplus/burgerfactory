@@ -3,9 +3,9 @@ Theme Name: Burger Factory
 Theme URI: https://anguswoodman.com/wordpress-theme-burger-factory
 Author: Angus Woodman
 Author URI: https://anguswoodman.com
-Description: Burger Factory is a minimalist theme for writers. It puts focus on the words and has
-options for creating index-style navigation instead of the standard blog flow.
-Version: 0.1
+Description: Burger Factory is a minimalist theme for writers. It puts focus on the words instead
+of images. Uses excerpts as summaries. Can still be used standard-blog-style.
+Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: burger-factory
@@ -824,6 +824,11 @@ nav .current-menu-item>a{
 }
 
 .nav-links a{
+}
+
+a.more-link{
+	font-size:14px;
+	color:#333;
 }
 
 /*--------------------------------------------------------------
