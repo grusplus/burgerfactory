@@ -11,7 +11,6 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i" rel="stylesheet">
 <?php wp_head(); ?>
 
 <?php //Moved out from style.css so they can be translated ?>

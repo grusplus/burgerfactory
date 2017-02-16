@@ -44,9 +44,9 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php if ( has_excerpt() ) : ?>
 							<p class="intro">
-								<?/* Not using the_excerpt() here because we're also outputting the
+								<?php /* Not using the_excerpt() here because we're also outputting the
 								     content and we don't want after post hooks firing twice. */ ?>
-								<?= get_the_excerpt(); ?>
+								<?php echo get_the_excerpt(); ?>
 							</p>
 						<?php endif;
 							the_content( sprintf(
@@ -73,10 +73,11 @@ get_header(); ?>
 					comments_template();
 				endif;
 
-				if ( is_active_sidebar( 'after-entry' ) ) :
-					?><div class="after-entry-widgets"><?php
-					dynamic_sidebar( 'after-entry' );
-					?></div><?php
+				if ( is_active_sidebar( 'after-entry' ) ) : ?>
+					<div class="after-entry-widgets">
+						<?php dynamic_sidebar( 'after-entry' ); ?>
+					</div>
+				<?php
 				endif;
 
 				the_post_navigation();

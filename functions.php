@@ -113,6 +113,7 @@ add_action( 'widgets_init', 'burger_factory_widgets_init' );
  * Enqueue scripts and styles.
  */
 function burger_factory_scripts() {
+	wp_enqueue_style( 'burger-factory-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i' );
 	wp_enqueue_style( 'burger-factory-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -125,11 +126,6 @@ add_action( 'wp_enqueue_scripts', 'burger_factory_scripts' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.

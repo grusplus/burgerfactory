@@ -20,9 +20,14 @@ around here.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
+== Notes ==
+
+For best results, particularly on mobile, keep the sidebar limited to a small, simple menu. There is a widget
+area after a post you can use for other things generally kept in the sidebar, like signup forms and category lists.
+
 == Changelog ==
 
-= 1.0 - Feb 20 2017 =
+= 1.0 - Feb 15 2017 =
 * Initial release
 
 == Credits ==
