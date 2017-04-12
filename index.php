@@ -41,7 +41,8 @@ get_header(); ?>
 						<header class="entry-header">
 							<h2 class="entry-title">
 							<?php
-							if( !empty( get_the_title() ) ) :
+							$title = get_the_title();
+							if( !empty( $title ) ) :
 								the_title( sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );
 							else:
 								echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ) . "Untitled" . '</a>';
@@ -57,7 +58,7 @@ get_header(); ?>
 
 						<div class="entry-summary">
 							<?php if ( ! has_excerpt() ) :
-								the_content('More');
+								the_content(esc_html__( 'More', 'burger-factory' ));
 							else :
 								the_excerpt();
 							endif;

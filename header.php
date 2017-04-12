@@ -12,18 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
-
-<?php //Moved out from style.css so they can be translated ?>
-<style type="text/css">
-.post-navigation .nav-previous::after
-{
-	content: "<?php echo __('Previous', 'burger-factory'); ?>";
-}
-.post-navigation .nav-next::after
-{
-	content: "<?php echo __('Next', 'burger-factory'); ?>";
-}
-</style>
 </head>
 
 <body <?php body_class(); ?>>

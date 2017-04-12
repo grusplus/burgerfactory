@@ -97,7 +97,7 @@ function burger_factory_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => 'After Entry',
+		'name'          => esc_html__( 'After Entry', 'burger-factory' ),
 		'id'            => 'after-entry',
 		'description'   => esc_html__( 'These widgets output after a single post.', 'burger-factory' ),
 		'before_widget' => '<div class="widget after-entry-widget">',

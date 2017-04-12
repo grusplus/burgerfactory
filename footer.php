@@ -17,11 +17,13 @@
 		<div class="col-3">
 		</div>
 		<div class="col-9 site-info">
-			<?php echo sprintf(
-				__('Made with %1$s + %2$s + %3$s', 'burger-factory'),
-				__( '<a href="https://wordpress.org/">WordPress</a>', 'burger-factory' ),
-				__( '<a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>\'s Burger Factory Theme', 'burger-factory' ),
-				!empty( get_theme_mod( 'detail_footer_copy' ) ) ? get_theme_mod( 'detail_footer_copy' ) : "Care"
+			<?php
+			$detail_footer_copy = get_theme_mod( 'detail_footer_copy' );
+			echo sprintf(
+				__( "Made with %1$s + %2$s + %3$s", 'burger-factory' ),
+				__( "<a href=\"https://wordpress.org/\">WordPress</a>", 'burger-factory' ),
+				__( "Burger Factory Theme by <a href=\"https://anguswoodman.com/\" rel=\"designer\">Angus Woodman</a>", 'burger-factory' ),
+				!empty( $detail_footer_copy ) ? get_theme_mod( 'detail_footer_copy' ) : "Care"
 			); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

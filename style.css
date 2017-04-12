@@ -112,8 +112,12 @@ dfn {
 }
 
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	font-size:36px;
+	line-height:40px;
+	margin-top:0px;
+	margin-bottom:8px;
+	color:#2f2f2f;
+	font-weight: 500;
 }
 
 mark {
@@ -1011,7 +1015,7 @@ p.site-description{
 	padding:0;
 }
 
-.after-entry-widgets{
+.post .after-entry-widgets{
 	margin:40px 0 100px;
 	max-width:400px;
 }
@@ -1048,6 +1052,7 @@ p.site-description{
 	font-size:24px;
 	margin-bottom:14px;
 	line-height:1.4em;
+	margin-top: 0;
 }
 .entry-list .cat-links{
 	color:#999;
@@ -1171,12 +1176,11 @@ ul.entry-list-condensed li ul{
 }
 
 .entry-title{
-	font-size:36px;
-	line-height:40px;
-	margin-top:0px;
-	margin-bottom:8px;
-	color:#2f2f2f;
-	font-weight: 500;
+
+}
+
+.entry-content ul, .entry-content ol{
+	margin-left:20px;
 }
 
 .page .entry-title{
@@ -1205,7 +1209,8 @@ ul.entry-list-condensed li ul{
 	color:#952637;
 	font-size:18px;
 	line-height:1.5em;
-	font-weight: 400;
+	font-weight:500;
+	text-transform:uppercase;
 }
 
 .entry-content h2,
@@ -1251,7 +1256,7 @@ div div.sharedaddy h3.sd-title{
 	display:none;
 }
 
-.entry-footer{
+.post .entry-footer{
 	padding: 0px 0 60px 0;
 }
 

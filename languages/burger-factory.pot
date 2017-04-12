@@ -46,8 +46,8 @@ msgstr ""
 
 #: footer.php:23
 msgid ""
-"<a href=\"https://anguswoodman.com/\" rel=\"designer\">Angus Woodman</a>'s "
-"Burger Factory Theme"
+"Burger Factory Theme by "
+"<a href=\"https://anguswoodman.com/\" rel=\"designer\">Angus Woodman</a>"
 msgstr ""
 
 #: functions.php:47
@@ -56,6 +56,10 @@ msgstr ""
 
 #: functions.php:90
 msgid "Sidebar"
+msgstr ""
+
+#: functions.php:100
+msgid "After Entry"
 msgstr ""
 
 #: functions.php:92
@@ -98,6 +102,10 @@ msgstr ""
 
 #: index.php:26
 msgid "Search Results for: %s"
+msgstr ""
+
+#: index.php:61
+msgid "More"
 msgstr ""
 
 #: index.php:78
