@@ -122,6 +122,28 @@ function burger_factory_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'burger_factory_scripts' );
 
+
+/**
+ * There's some copy in the CSS for Previous / Next post labels. This is here so we can translate
+ * them.
+ */
+function burger_factory_translatable_css() {
+    ?>
+        <style>
+			.post-navigation .nav-previous::after
+			{
+				content: "<?php echo __('Previous', 'burger-factory'); ?>";
+			}
+			.post-navigation .nav-next::after
+			{
+				content: "<?php echo __('Next', 'burger-factory'); ?>";
+			}
+        </style>
+    <?php
+}
+add_action( 'wp_head', 'burger_factory_translatable_css' );
+
+
 /**
  * Custom template tags for this theme.
  */

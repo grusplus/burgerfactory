@@ -36,18 +36,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:21
-msgid "Made with %1$s + %2$s + %3$s"
-msgstr ""
-
-#: footer.php:22
-msgid "<a href=\"https://wordpress.org/\">WordPress</a>"
-msgstr ""
-
-#: footer.php:23
-msgid ""
-"Burger Factory Theme by "
-"<a href=\"https://anguswoodman.com/\" rel=\"designer\">Angus Woodman</a>"
+#: footer.php:20
+msgid "Theme by <a href=\"https://anguswoodman.com/\" rel=\"designer\">Angus Woodman</a>"
 msgstr ""
 
 #: functions.php:47

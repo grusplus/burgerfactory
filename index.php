@@ -57,8 +57,9 @@ get_header(); ?>
 						</header>
 
 						<div class="entry-summary">
-							<?php if ( ! has_excerpt() ) :
+							<?php if ( ! has_excerpt() && !is_search() ) :
 								the_content(esc_html__( 'More', 'burger-factory' ));
+								wp_link_pages();
 							else :
 								the_excerpt();
 							endif;

@@ -4,11 +4,11 @@ Theme URI: https://anguswoodman.com/wordpress-theme-burger-factory
 Author: Angus Woodman
 Author URI: https://anguswoodman.com
 Description: Burger Factory is a minimalist theme for writers. It puts focus on the words instead of images. Uses excerpts as summaries. Can still be used standard-blog-style.
-Version: 1.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: burger-factory
-Tags: two-columns, left-sidebar, featured-images, sticky-post, theme-options, threaded-comments, translation-ready, blog
+Tags: two-columns, left-sidebar, featured-images, sticky-post, threaded-comments, translation-ready, blog
 
 Burger Factory is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 */
@@ -424,15 +424,7 @@ body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
-
-blockquote,
-q {
+blockquote{
 	quotes: "" "";
 	border-left:2px solid #ccc;
 	padding-left:20px;
@@ -440,7 +432,20 @@ q {
 	font-size:16px;
 }
 
+q {
+	quotes: "" "";
+	font-size: 18px;
+	font-style: italic;
+}
 
+p .cite{
+
+}
+
+q:before,
+q:after {
+	content: "\"";
+}
 
 hr {
 	background-color: #ccc;
@@ -456,7 +461,7 @@ table{
 ul,
 ol {
 	margin: 0 0 1.5em 0px;
-	padding-left:0px;
+	padding-left:24px;
 }
 
 ul ul,
@@ -599,8 +604,20 @@ textarea {
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
-.sidebar{
+.sidebar {
 	padding:0px 0 0px 0px;
+}
+
+.sidebar ul,
+.sidebar ol {
+	margin: 0 0 1.5em 0px;
+	padding-left:0px;
+}
+
+.sidebar #wp-calendar td,
+.sidebar #wp-calendar th {
+	padding: 0;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1134,8 +1151,8 @@ ul.entry-list-condensed li ul{
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
-	border-left:4px solid #eee;
-	padding-left:20px;
+	border-left: 2px solid #952637;
+	padding: 0px 0 0px 24px;
 }
 
 .hentry {
