@@ -55,9 +55,9 @@ get_header(); ?>
 					comments_template();
 				endif;
 
-				if ( is_active_sidebar( 'after-entry' ) ) :
+				if ( is_active_sidebar( 'after-page' ) ) :
 					?><div class="after-entry-widgets"><?php
-					dynamic_sidebar( 'after-entry' );
+					dynamic_sidebar( 'after-page' );
 					?></div><?php
 				endif;
 

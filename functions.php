@@ -97,10 +97,20 @@ function burger_factory_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'After Entry', 'burger-factory' ),
+		'name'          => esc_html__( 'After Post', 'burger-factory' ),
 		'id'            => 'after-entry',
-		'description'   => esc_html__( 'These widgets output after a single post.', 'burger-factory' ),
-		'before_widget' => '<div class="widget after-entry-widget">',
+		'description'   => esc_html__( 'These widgets output after a single post but not a page.', 'burger-factory' ),
+		'before_widget' => '<div class="widget after-entry-widget after-post-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'After Page', 'burger-factory' ),
+		'id'            => 'after-entry',
+		'description'   => esc_html__( 'These widgets output after a single page but not a post.', 'burger-factory' ),
+		'before_widget' => '<div class="widget after-entry-widget after-page-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
