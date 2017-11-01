@@ -289,24 +289,24 @@ dd{
 # Typography
 --------------------------------------------------------------*/
 body {
-    color: #4A4A4A;
-    font-family: 'Roboto', sans-serif;
-    font-weight:400;
-    font-size: 16px;
-    line-height: 1.5;
+	color: #4A4A4A;
+	font-family: 'Roboto', sans-serif;
+	font-weight:400;
+	font-size: 16px;
+	line-height: 1.5;
 }
 
 .entry-content,
 .site-description,
 p{
-    /* font-family: 'Noto Serif', serif; */
+	/* font-family: 'Noto Serif', serif; */
 }
 
 p.site-title,
 .intro,
 .wp-caption-text
 {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 
@@ -318,23 +318,23 @@ h5,
 h6,
 p.site-title,
 p.site-description {
-    font-family: 'Roboto', sans-serif;
-    clear: both;
-    font-weight:500;
+	font-family: 'Roboto', sans-serif;
+	clear: both;
+	font-weight:500;
 }
 
 p {
-    margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 button,
 input,
 select,
 textarea {
-    color: #404040;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
+	color: #404040;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
 dfn,
@@ -948,6 +948,7 @@ a.more-link{
 	margin-bottom:0;
 	font-size:20px;
 	font-weight:500;
+	line-height:1.5;
 }
 
 .site-title a{
@@ -963,7 +964,7 @@ p.site-description{
 	color:#666;
 	font-size:14px;
 	display:inline-block;
-    font-weight:400;
+	font-weight:400;
 }
 
 .single p.site-description {
@@ -1189,7 +1190,6 @@ ul.entry-list-condensed li ul{
 }
 
 .entry-title{
-
 }
 
 .entry-content ul, .entry-content ol{
@@ -1202,14 +1202,13 @@ ul.entry-list-condensed li ul{
 
 
 .single .entry-meta{
-	margin:0px 0 24px;
-	font-size:14px;
+	margin: 0px 0 30px;
+	font-size: 12px;
 }
 
 .single .entry-meta, .single .entry-meta a{
 	text-decoration:none;
 	border:0;
-	text-transform:uppercase;
 	font-weight:500;
 }
 
@@ -1448,9 +1447,9 @@ object {
 @media only screen and (max-width: 720px) {
 
 	.container {
-  		width: 94%;
-  		margin-left: auto;
-  		margin-right: auto;
+		width: 94%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 
@@ -1543,67 +1542,67 @@ object {
 
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
-    width: 80%;
+	width: 80%;
   }
 }
 
 @media only screen and (min-width: 45em) {  /* 720px */
   .col-1 {
-    width: 4.33%;
+	width: 4.33%;
   }
 
   .col-2 {
-    width: 12.66%;
+	width: 12.66%;
   }
 
   .col-3 {
-    width: 21%;
+	width: 21%;
   }
 
   .col-4 {
-    width: 29.33%;
+	width: 29.33%;
   }
 
   .col-5 {
-    width: 37.66%;
+	width: 37.66%;
   }
 
   .col-6 {
-    width: 46%;
+	width: 46%;
   }
 
   .col-7 {
-    width: 54.33%;
+	width: 54.33%;
   }
 
   .col-8 {
-    width: 62.66%;
+	width: 62.66%;
   }
 
   .col-9 {
-    width: 71%;
+	width: 71%;
   }
 
   .col-10 {
-    width: 79.33%;
+	width: 79.33%;
   }
 
   .col-11 {
-    width: 87.66%;
+	width: 87.66%;
   }
 
   .col-12 {
-    width: 96%;
+	width: 96%;
   }
 
   .hidden-sm {
-    display: block;
+	display: block;
   }
 }
 
 @media only screen and (min-width: 60em) { /* 960px */
   .container {
-    width: 75%;
-    max-width: 60rem;
+	width: 75%;
+	max-width: 60rem;
   }
 }
