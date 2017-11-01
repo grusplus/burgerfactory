@@ -89,7 +89,7 @@ function burger_factory_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'burger-factory' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'burger-factory' ),
+		'description'   => esc_html__( 'For best results, keep it simple. A single menu works well.', 'burger-factory' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -108,8 +108,8 @@ function burger_factory_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => esc_html__( 'After Page', 'burger-factory' ),
-		'id'            => 'after-entry',
-		'description'   => esc_html__( 'These widgets output after a single page but not a post.', 'burger-factory' ),
+		'id'            => 'after-page',
+		'description'   => esc_html__( 'These widgets output after a page but not after a post.', 'burger-factory' ),
 		'before_widget' => '<div class="widget after-entry-widget after-page-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -136,10 +136,14 @@ add_action( 'wp_enqueue_scripts', 'burger_factory_scripts' );
 /**
  * There's some copy in the CSS for Previous / Next post labels. This is here so we can translate
  * them.
+ *
+ * We also have some color options in the customizer, so we do that here as well.
+ *
+ * If you update the accent color CSS selectors, also update it in the customizer.js
  */
-function burger_factory_translatable_css() {
-    ?>
-        <style>
+function burger_factory_dynamic_css() {
+	?>
+		<style>
 			.post-navigation .nav-previous::after
 			{
 				content: "<?php echo __('Previous', 'burger-factory'); ?>";
@@ -148,11 +152,15 @@ function burger_factory_translatable_css() {
 			{
 				content: "<?php echo __('Next', 'burger-factory'); ?>";
 			}
-        </style>
-    <?php
-}
-add_action( 'wp_head', 'burger_factory_translatable_css' );
 
+			p.site-description, .intro { color: <?php echo get_theme_mod( 'accent_color_1', '#952637' ); ?>; }
+			.sticky { border-left-color: <?php echo get_theme_mod( 'accent_color_1', '#952637' ); ?>; }
+
+			.front-page-category, .single .entry-meta, .single .entry-meta a { color: <?php echo get_theme_mod( 'accent_color_2', '#BB7243' ); ?>; }
+		</style>
+	<?php
+}
+add_action( 'wp_head', 'burger_factory_dynamic_css' );
 
 /**
  * Custom template tags for this theme.

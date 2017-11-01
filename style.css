@@ -4,7 +4,7 @@ Theme URI: https://anguswoodman.com/wordpress-theme-burger-factory
 Author: Angus Woodman
 Author URI: https://anguswoodman.com
 Description: Burger Factory is a minimalist theme for writers. It puts focus on the words instead of images. Uses excerpts as summaries. Can still be used standard-blog-style.
-Version: 1.0.1
+Version: 1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: burger-factory
@@ -37,11 +37,8 @@ Burger Factory is based on Underscores http://underscores.me/, (C) 2012-2016 Aut
 	## Captions
 	## Galleries
 # Grid
-
-Colors:
-#BB7243
-#952637
 --------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
 # Normalize
@@ -967,7 +964,6 @@ p.site-description{
 	font-size:14px;
 	display:inline-block;
     font-weight:400;
-    color:#952637;
 }
 
 .single p.site-description {
@@ -1056,7 +1052,6 @@ p.site-description{
 }
 .front-page-category {
 	font-size:14px;
-	color:#BB7243;
 	text-transform:uppercase;
 	margin:0px;
 	margin-bottom:40px;
@@ -1151,7 +1146,8 @@ ul.entry-list-condensed li ul{
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
-	border-left: 2px solid #952637;
+	border-left-width: 2px;
+	border-left-style: solid;
 	padding: 0px 0 0px 24px;
 }
 
@@ -1211,7 +1207,6 @@ ul.entry-list-condensed li ul{
 }
 
 .single .entry-meta, .single .entry-meta a{
-	color:#BB7243;
 	text-decoration:none;
 	border:0;
 	text-transform:uppercase;
@@ -1223,11 +1218,9 @@ ul.entry-list-condensed li ul{
 }
 
 .intro{
-	color:#952637;
-	font-size:18px;
-	line-height:1.5em;
-	font-weight:500;
-	text-transform:uppercase;
+	font-size:22px;
+	line-height:1.4em;
+	font-weight: 300;
 }
 
 .entry-content h2,

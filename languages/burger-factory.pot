@@ -36,8 +36,8 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:20
-msgid "Theme by <a href=\"https://anguswoodman.com/\" rel=\"designer\">Angus Woodman</a>"
+#: footer.php:20 inc/customizer.php:58
+msgid 'Theme by <a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>'
 msgstr ""
 
 #: functions.php:47
@@ -53,11 +53,15 @@ msgid "After Entry"
 msgstr ""
 
 #: functions.php:92
-msgid "Add widgets here."
+msgid "For best results, keep it simple. A single menu works well."
 msgstr ""
 
 #: functions.php:102
-msgid "These widgets output after a single post."
+msgid "These widgets output after a single post but not a page."
+msgstr ""
+
+#: functions.php:112
+msgid "These widgets output after a page but not after a post."
 msgstr ""
 
 #: header.php:21
@@ -70,6 +74,26 @@ msgstr ""
 
 #: header.php:32
 msgid "Skip to content"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "First Accent Color (Tagline, Excerpt)"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Second Accent Color (Meta)"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "Copy"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Footer Copy"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "If you replace the link to the author's website, another link somewhere else on your site would be appreciated :)"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma

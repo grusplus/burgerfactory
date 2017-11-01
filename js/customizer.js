@@ -39,4 +39,28 @@
 			}
 		} );
 	} );
+
+	wp.customize( 'accent_color_1', function( value ) {
+		value.bind( function( to ) {
+			$( 'p.site-description' ).css( 'color', to );
+			$( '.intro' ).css( 'color', to );
+			$( '.sticky' ).css( 'border-left-color', to );
+		} );
+	});
+
+	wp.customize( 'accent_color_2', function( value ) {
+		value.bind( function( to ) {
+			$( '.front-page-category' ).css( 'color', to );
+			$( '.single .entry-meta' ).css( 'color', to );
+			$( '.single .entry-meta a' ).css( 'color', to );
+		} );
+	});
+
+	wp.customize( 'footer_copy', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-footer .site-info' ).html( to );
+		} );
+	});
+
+
 } )( jQuery );

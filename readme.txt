@@ -4,7 +4,7 @@ Contributors: Angus Woodman
 Tags: two-columns, left-sidebar, featured-images, sticky-post, threaded-comments, translation-ready, blog
 
 Requires at least: 4.0
-Tested up to: 4.7.2
+Tested up to: 4.8.3
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,7 @@ Source: https://fonts.google.com/specimen/Roboto
 
 == Changelog ==
 
+= 1.1 - Nov 01 2017 =
 = 1.0 - Apr 18 2017 =
 * Initial release
 
