@@ -50,13 +50,14 @@ function burger_factory_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_section( 'burger_factory_copy' , array(
-		'title'      => __( 'Copy', 'burger-theme' ),
+		'title'      => __( 'Copy', 'burger-factory' ),
 		'priority'   => 30,
 	) );
 
 	$wp_customize->add_setting( 'footer_copy', array(
 		'default'     => __( 'Theme by <a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>' , 'burger-factory'),
-		'transport'   => 'postMessage'
+		'transport'   => 'postMessage',
+		'sanitize_callback' => 'burger_factory_filter_most_tags'
 	));
 
 	$wp_customize->add_control(
@@ -73,6 +74,46 @@ function burger_factory_customize_register( $wp_customize ) {
 	);
 }
 add_action( 'customize_register', 'burger_factory_customize_register' );
+
+/**
+ * Filter for text edits to filter out most html elements but leave a few like links and formatting
+ *
+ * Generally allows the same tags that WP does in comments by default
+ *
+ * @param  string $string
+ * @return string
+ */
+function burger_factory_filter_most_tags($string) {
+	$allowedtags = array(
+		'a' => array(
+			'href' => true,
+			'title' => true,
+		),
+		'abbr' => array(
+			'title' => true,
+		),
+		'acronym' => array(
+			'title' => true,
+		),
+		'b' => array(),
+		'blockquote' => array(
+			'cite' => true,
+		),
+		'cite' => array(),
+		'code' => array(),
+		'del' => array(
+			'datetime' => true,
+		),
+		'em' => array(),
+		'i' => array(),
+		'q' => array(
+			'cite' => true,
+		),
+		'strike' => array(),
+		'strong' => array(),
+	);
+	return wp_kses( $string, $allowedtags );
+}
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
