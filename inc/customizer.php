@@ -17,12 +17,14 @@ function burger_factory_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'accent_color_1', array(
 		'default'   => '#952637',
-		'transport' => 'postMessage'
+		'transport' => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color'
 	));
 
 	$wp_customize->add_setting( 'accent_color_2', array(
 		'default'    => '#BB7243',
-		'transport'  => 'postMessage'
+		'transport'  => 'postMessage',
+		'sanitize_callback' => 'sanitize_hex_color'
 	));
 
 	$wp_customize->add_control(
