@@ -4,7 +4,7 @@ Contributors: Angus Woodman
 Tags: two-columns, left-sidebar, featured-images, sticky-post, threaded-comments, translation-ready, blog
 
 Requires at least: 4.0
-Tested up to: 4.8.3
+Tested up to: 4.9.8
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,7 +24,7 @@ and content on the single page, and are styled differently like a subtitle.
 
 == Copyright ==
 
-Burger Factory WordPress Theme, Copyright 2017 Angus Woodman
+Burger Factory WordPress Theme, Copyright 2017-2018 Angus Woodman
 Burger Factory is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -52,6 +52,7 @@ Source: https://fonts.google.com/specimen/Roboto
 
 == Changelog ==
 
+= 1.2 - Nov 25 2018 =
 = 1.1 - Nov 01 2017 =
 = 1.0 - Apr 18 2017 =
 * Initial release

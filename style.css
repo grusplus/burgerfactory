@@ -17,6 +17,7 @@ Burger Factory is based on Underscores http://underscores.me/, (C) 2012-2016 Aut
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Color Schemes
 # Typography
 # Layout
 # Elements
@@ -113,7 +114,6 @@ h1 {
 	line-height:40px;
 	margin-top:0px;
 	margin-bottom:8px;
-	color:#2f2f2f;
 	font-weight: 500;
 }
 
@@ -284,12 +284,183 @@ dd{
 	font-size:16px;
 }
 
+/*--------------------------------------------------------------
+# Color Schemes
+--------------------------------------------------------------*/
+.color-scheme-dark{
+	/* background-image:url(/wp-content/themes/burger-factory/image-1.jpg);
+	background-size:100%; */
+	color: #c9c9c9;
+}
+
+.color-scheme-dark #site-wrapper{
+	background-color:rgba(0, 0, 0, 0.8);
+	border-top:8px solid rgba(0, 0, 0, 0.2);
+	border-bottom:8px solid rgba(0, 0, 0, 0.2);
+}
+
+.color-scheme-dark a {
+	color: #69cdf7;
+	border-bottom:1px solid #3b6475;
+}
+
+.color-scheme-dark .sidebar a {
+	color: #f1f1f1;
+	border-bottom:1px solid #555;
+}
+
+.color-scheme-dark a:hover,
+.color-scheme-dark a:focus,
+.color-scheme-dark a:active {
+	color: #fff;
+	border-bottom:1px solid #fff;
+}
+
+.color-scheme-dark .site-title a{
+	color:#fff;
+}
+
+.color-scheme-dark .entry-list .cat-links{
+	color:#666;
+}
+
+.color-scheme-dark .entry-list .cat-links a{
+	border-width:0;
+	color:#888;
+	text-transform:uppercase;
+}
+
+.color-scheme-dark h1,
+.color-scheme-dark .entry-content h2,
+.color-scheme-dark .entry-content h3 {
+	color:#fff;
+}
+.color-scheme-dark .entry-content h4 {
+	color:#676767;
+}
+.color-scheme-dark .entry-content a{
+	color:#fff;
+}
+
+.color-scheme-dark h2.entry-title a{
+	color:#fff;
+	border-bottom-color:#666;
+}
+.color-scheme-dark h2.entry-title a:hover{
+	color:#fff;
+	border-bottom-color:#fff;
+}
+
+.color-scheme-dark .entry-list .page-content,
+.color-scheme-dark .entry-list .entry-content,
+.color-scheme-dark .entry-list .entry-summary {
+	color:#ddd;
+}
+
+.color-scheme-dark .site-footer .site-info{
+	border-top:1px solid #4a4a4a;
+	color:#999;
+}
+
+
+.color-scheme-dark.single p.site-description {
+	color: #999;
+}
+
+.color-scheme-dark .theme-by,
+.color-scheme-dark .theme-by a{
+	color: #555;
+}
+
+
+
+
+
+
+h1,
+.entry-content h2,
+.entry-content h3 {
+	color:#2f2f2f;
+}
+.entry-content h4 {
+	color:#676767;
+}
+
+
+body.color-scheme-light{
+	background-color: #fff;
+	color:#4a4a4a;
+}
+
+body.color-scheme-light .site-title a{
+	border-width:0;
+	color:#2f2f2f;
+}
+
+.color-scheme-dark hr {
+	background-color: #444;
+}
+
+button,
+input,
+select,
+textarea {
+	color: #404040;
+
+}
+
+pre {
+	background: #eee;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+}
+
+.color-scheme-light hr {
+	background-color: #ccc;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #274cce;
+	border-bottom:1px solid #274cce;
+}
+
+p a{
+	color: #274cce;
+	border-bottom-color:#bed2f3;
+}
+
+
+
+body.color-scheme-light a {
+	color: #2f2f2f;
+	border-bottom:1px solid #bbb;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0px solid;
+	border-radius: 3px;
+	background-color: #696669;
+	color:#fff;
+}
+
+a.more-link{
+	font-size:14px;
+	color:#333;
+
+}
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body {
-	color: #4A4A4A;
 	font-family: 'Roboto', sans-serif;
 	font-weight:400;
 	font-size: 16px;
@@ -331,7 +502,6 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -353,7 +523,6 @@ address {
 }
 
 pre {
-	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -375,7 +544,6 @@ var {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
@@ -391,8 +559,6 @@ big {
 
 
 pre{
-	border:1px solid #bbbbbb;
-	background-color:#f3f3f3;
 	padding:2px 6px;
 	border-top-left-radius:4px;
 	border-top-right-radius:4px;
@@ -415,10 +581,6 @@ html {
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
-}
-
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote{
@@ -445,7 +607,6 @@ q:after {
 }
 
 hr {
-	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -518,8 +679,6 @@ input[type="reset"],
 input[type="submit"] {
 	border: 0px solid;
 	border-radius: 3px;
-	background-color: #696669;
-	color:#fff;
 	font-weight:400;
 	font-size: 16px;
 	line-height: 1;
@@ -624,16 +783,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #2f2f2f;
 	text-decoration:none;
-	border-bottom:1px solid #bbb;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: #274cce;
-	border-bottom:1px solid #274cce;
 }
 
 a:focus {
@@ -645,10 +795,6 @@ a:active {
 	outline: 0;
 }
 
-p a{
-	color: #274cce;
-	border-bottom-color:#bed2f3;
-}
 
 /* Hides the link border under the image */
 p a img{
@@ -845,7 +991,6 @@ nav .current-menu-item>a{
 
 a.more-link{
 	font-size:14px;
-	color:#333;
 }
 
 /*--------------------------------------------------------------
@@ -951,9 +1096,8 @@ a.more-link{
 	line-height:1.5;
 }
 
-.site-title a{
+body .site-title a{
 	border-width:0;
-	color:#2f2f2f;
 }
 
 .single p.site-title a{
@@ -961,14 +1105,12 @@ a.more-link{
 
 p.site-description{
 	margin:0;
-	color:#666;
 	font-size:14px;
 	display:inline-block;
 	font-weight:400;
 }
 
 .single p.site-description {
-	color: #999;
 }
 
 .site-footer{
@@ -977,16 +1119,13 @@ p.site-description{
 }
 
 .site-footer .site-info{
-	border-top:1px solid #eee;
 	padding-top:30px;
 	font-size:11px;
-	color:#9999af;
 }
 
 .site-footer .site-info a{
 	border:0;
 	font-size:11px;
-	color:#9999af;
 }
 
 .not-found h1{
@@ -1067,12 +1206,9 @@ p.site-description{
 	line-height:1.4em;
 	margin-top: 0;
 }
-.entry-list .cat-links{
-	color:#999;
-}
+
 .entry-list .cat-links a{
 	border-width:0;
-	color:#999;
 	text-transform:uppercase;
 }
 
@@ -1082,7 +1218,6 @@ p.site-description{
 	font-size: 18px;
 	line-height: 1.7;
 	margin: -10px 0 0;
-	color:#4f4f4f;
 }
 
 ul.entry-list-condensed {
@@ -1169,10 +1304,9 @@ ul.entry-list-condensed li ul{
 .page-content,
 .entry-content,
 .entry-summary {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 1.7;
 	margin: 1.5em 0 0;
-	color:#4f4f4f;
 }
 
 .entry-content{
@@ -1222,25 +1356,20 @@ ul.entry-list-condensed li ul{
 	font-weight: 300;
 }
 
-.entry-content h2,
-.entry-content h3 {
-	color:#2f2f2f;
-}
 
 .entry-content h2 {
 	margin-top:52px;
-	font-size:28px;
+	font-size:32px;
 }
 
 .entry-content h3 {
 	margin-top:48px;
-	font-size:24px;
+	font-size:28px;
 }
 
 .entry-content h4 {
-	color:#676767;
 	margin-top:36px;
-	font-size:18px;
+	font-size:22px;
 }
 
 .tag-links{

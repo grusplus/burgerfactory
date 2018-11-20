@@ -37,7 +37,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #: footer.php:20 inc/customizer.php:58
-msgid 'Theme by <a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>'
+msgid '<a href="https://anguswoodman.com/" rel="designer">Theme by Angus Woodman</a>'
 msgstr ""
 
 #: functions.php:47
@@ -93,7 +93,11 @@ msgid "Footer Copy"
 msgstr ""
 
 #: inc/customizer.php:68
-msgid "If you replace the link to the author's website, another link somewhere else on your site would be appreciated :)"
+msgid "Appears at the bottom of every page."
+msgstr ""
+
+#: inc/customizer.php:39
+msgid "Color Scheme"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma

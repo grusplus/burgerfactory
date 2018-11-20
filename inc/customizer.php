@@ -15,6 +15,11 @@ function burger_factory_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+	$wp_customize->add_setting( 'color_scheme', array(
+		'default'   => 'light',
+		'transport' => 'postMessage',
+	));
+
 	$wp_customize->add_setting( 'accent_color_1', array(
 		'default'   => '#952637',
 		'transport' => 'postMessage',
@@ -25,6 +30,23 @@ function burger_factory_customize_register( $wp_customize ) {
 		'default'    => '#BB7243',
 		'transport'  => 'postMessage',
 		'sanitize_callback' => 'sanitize_hex_color'
+	));
+
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'color_scheme',
+		array(
+			'label'       => __( 'Color Scheme', 'burger-factory' ),
+			'settings'    => 'color_scheme',
+			'priority'    => 1,
+			'section'     => 'colors',
+			'type'        => 'select',
+			'choices' => array(
+				'color-scheme-light' => 'Light',
+				'color-scheme-dark' => 'Dark',
+				'color-scheme-insane' => 'Insane',
+			)
+		)
 	));
 
 	$wp_customize->add_control(
@@ -68,7 +90,7 @@ function burger_factory_customize_register( $wp_customize ) {
 			'footer_copy',
 			array(
 				'label'       => __( "Footer Copy", 'burger-factory' ),
-				'description' => __( "If you replace the link to the author's website, another link somewhere else on your site would be appreciated :)", 'burger-factory' ),
+				'description' => __( "Appears at the bottom of every page.", 'burger-factory' ),
 				'section'     => 'burger_factory_copy',
 				'settings'    => 'footer_copy'
 			)

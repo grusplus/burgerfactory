@@ -59,11 +59,6 @@ function burger_factory_setup() {
 		'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'burger_factory_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'burger_factory_setup' );
@@ -101,6 +96,16 @@ function burger_factory_widgets_init() {
 		'id'            => 'after-entry',
 		'description'   => esc_html__( 'These widgets output after a single post but not a page.', 'burger-factory' ),
 		'before_widget' => '<div class="widget after-entry-widget after-post-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Before Site', 'burger-factory' ),
+		'id'            => 'before-page',
+		'description'   => esc_html__( 'These widgets output before every page and post on the site.', 'burger-factory' ),
+		'before_widget' => '<div class="widget before-site-widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
