@@ -309,7 +309,7 @@ dd{
 	color: #555;
 }
 
-.color-scheme-dark a {
+.color-scheme-dark a, .color-scheme-dark a:visited {
 	color: #84bdff;
 	border-bottom:1px solid rgba(59, 100, 117, 0.8);
 }
@@ -437,9 +437,9 @@ dd{
 	color: #ccc;
 }
 
-.color-scheme-light a {
-	color: #1c5cda;
-	border-bottom:1px solid #2c83e733;
+.color-scheme-light a, .color-scheme-light a:visited {
+	color: #274cce;
+	border-bottom:1px solid #274cce55;
 }
 
 .color-scheme-light .sidebar a {
@@ -453,8 +453,7 @@ dd{
 .color-scheme-light a:hover,
 .color-scheme-light a:focus,
 .color-scheme-light a:active {
-	color: #4a4a4a;
-	border-bottom:1px solid #4a4a4a99;
+	border-bottom:1px solid #274cce;
 }
 
 .color-scheme-light .site-title a{
@@ -511,7 +510,7 @@ dd{
 }
 
 .color-scheme-light code {
-	background-color:#ec9d9d;
+	background-color:#f7c7c7;
 }
 
 .color-scheme-light kbd,
