@@ -36,8 +36,12 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:20 inc/customizer.php:58
-msgid '<a href="https://anguswoodman.com/" rel="designer">Theme by Angus Woodman</a>'
+#: inc/customizer.php:81
+msgid 'Made With Love Somewhere On Earth'
+msgstr ""
+
+#: footer.php:21
+msgid '<a href="https://anguswoodman.com/simple-wordpress-themes" rel="designer">Theme by Angus Woodman</a>'
 msgstr ""
 
 #: functions.php:47

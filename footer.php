@@ -18,7 +18,7 @@
 		</div>
 		<div class="col-9 site-info">
 			<p><?php echo get_theme_mod( 'footer_copy' ); ?></p>
-			<p class="theme-by really-small"><?php echo __( '<a href="https://anguswoodman.com/" rel="designer">Theme by Angus Woodman</a>', 'burger-factory' ); ?></p>
+			<p class="theme-by really-small"><?php echo __( '<a href="https://anguswoodman.com/simple-wordpress-themes" rel="designer">Theme by Angus Woodman</a>', 'burger-factory' ); ?></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

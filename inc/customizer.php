@@ -43,8 +43,7 @@ function burger_factory_customize_register( $wp_customize ) {
 			'type'        => 'select',
 			'choices' => array(
 				'color-scheme-light' => 'Light',
-				'color-scheme-dark' => 'Dark',
-				'color-scheme-insane' => 'Insane',
+                'color-scheme-dark' => 'Dark'
 			)
 		)
 	));
@@ -79,7 +78,7 @@ function burger_factory_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'footer_copy', array(
-		'default'     => __( 'Theme by <a href="https://anguswoodman.com/" rel="designer">Angus Woodman</a>' , 'burger-factory'),
+		'default'     => __( 'Made With Love Somewhere On Earth' , 'burger-factory'),
 		'transport'   => 'postMessage',
 		'sanitize_callback' => 'burger_factory_filter_most_tags'
 	));

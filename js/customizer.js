@@ -52,7 +52,6 @@
 		value.bind( function( to ) {
 			$( 'body' ).removeClass( 'color-scheme-light' );
 			$( 'body' ).removeClass( 'color-scheme-dark' );
-			$( 'body' ).removeClass( 'color-scheme-insane' );
 			$( 'body' ).addClass( to );
 		} );
 	});
