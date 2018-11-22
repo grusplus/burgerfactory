@@ -102,16 +102,6 @@ function burger_factory_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Before Site', 'burger-factory' ),
-		'id'            => 'before-page',
-		'description'   => esc_html__( 'These widgets output before every page and post on the site.', 'burger-factory' ),
-		'before_widget' => '<div class="widget before-site-widget">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-
-	register_sidebar( array(
 		'name'          => esc_html__( 'After Page', 'burger-factory' ),
 		'id'            => 'after-page',
 		'description'   => esc_html__( 'These widgets output after a page but not after a post.', 'burger-factory' ),
