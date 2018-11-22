@@ -18,6 +18,7 @@ function burger_factory_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'color_scheme', array(
 		'default'   => 'light',
 		'transport' => 'postMessage',
+		'sanitize_callback' => 'sanitize_key'
 	));
 
 	$wp_customize->add_setting( 'accent_color_1', array(
