@@ -38,3 +38,10 @@
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
+            <?php if ( is_active_sidebar( 'before-content' ) ) :
+                ?><div class="row"><div class="col-12 before-content-widgets">
+
+                <?php
+                dynamic_sidebar( 'before-content' );
+                ?></div></div><?php
+            endif; ?>

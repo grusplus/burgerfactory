@@ -11,6 +11,12 @@
 
 ?>
 
+        <?php if ( is_active_sidebar( 'after-content' ) ) :
+            ?><div class="after-content-widgets"><?php
+            dynamic_sidebar( 'after-content' );
+            ?></div><?php
+        endif; ?>
+
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer row" role="contentinfo">

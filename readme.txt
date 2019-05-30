@@ -4,7 +4,7 @@ Contributors: Angus Woodman
 Tags: two-columns, left-sidebar, featured-images, sticky-post, threaded-comments, translation-ready, blog
 
 Requires at least: 4.0
-Tested up to: 4.9.8
+Tested up to: 5.2.1
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,7 @@ Source: https://fonts.google.com/specimen/Roboto
 
 == Changelog ==
 
+= 1.3 - May 30 2019 =
 = 1.2 - Nov 25 2018 =
 = 1.1 - Nov 01 2017 =
 = 1.0 - Apr 18 2017 =
@@ -59,5 +60,6 @@ Source: https://fonts.google.com/specimen/Roboto
 
 == Notes ==
 
-For best results, particularly on mobile, keep the sidebar limited to a small, simple menu. There is a widget
-area after a post you can use for other things generally kept in the sidebar, like signup forms and category lists.
+For best results, particularly on mobile, keep the sidebar limited to a small, simple menu. There are widget
+areas after a post, and after a page that you can use for other things generally kept in the sidebar, like
+signup forms and category lists.

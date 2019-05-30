@@ -48,23 +48,43 @@ msgstr ""
 msgid "Primary"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:85
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:100
-msgid "After Entry"
-msgstr ""
-
-#: functions.php:92
+#: functions.php:87
 msgid "For best results, keep it simple. A single menu works well."
 msgstr ""
 
-#: functions.php:102
+#: functions.php:95
+msgid "Before Content"
+msgstr ""
+
+#: functions.php:97
+msgid "These widgets output before the content on every page."
+msgstr ""
+
+#: functions.php:105
+msgid "After Content"
+msgstr ""
+
+#: functions.php:107
+msgid "These widgets output after the content on every page."
+msgstr ""
+
+#: functions.php:115
+msgid "After Post"
+msgstr ""
+
+#: functions.php:117
 msgid "These widgets output after a single post but not a page."
 msgstr ""
 
-#: functions.php:112
+#: functions.php:125
+msgid "After Page"
+msgstr ""
+
+#: functions.php:127
 msgid "These widgets output after a page but not after a post."
 msgstr ""
 
