@@ -1,8 +1,8 @@
 <?php
 /**
- * Burger Factory Theme Customizer.
+ * Grapefruit Stand Theme Customizer.
  *
- * @package Burger_Factory
+ * @package Grapefruit_Stand
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function burger_factory_customize_register( $wp_customize ) {
+function grapefruit_stand_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -37,7 +37,7 @@ function burger_factory_customize_register( $wp_customize ) {
 		$wp_customize,
 		'color_scheme',
 		array(
-			'label'       => __( 'Color Scheme', 'burger-factory' ),
+			'label'       => __( 'Color Scheme', 'grapefruit-stand' ),
 			'settings'    => 'color_scheme',
 			'priority'    => 1,
 			'section'     => 'colors',
@@ -54,7 +54,7 @@ function burger_factory_customize_register( $wp_customize ) {
 			$wp_customize,
 			'accent_color_1',
 			array(
-				'label'      => __( 'First Accent Color (Tagline, Excerpt)', 'burger-factory' ),
+				'label'      => __( 'First Accent Color (Tagline, Excerpt)', 'grapefruit-stand' ),
 				'section'    => 'colors',
 				'settings'   => 'accent_color_1'
 			)
@@ -66,22 +66,22 @@ function burger_factory_customize_register( $wp_customize ) {
 			$wp_customize,
 			'accent_color_2',
 			array(
-				'label'      => __( 'Second Accent Color (Meta)', 'burger-factory' ),
+				'label'      => __( 'Second Accent Color (Meta)', 'grapefruit-stand' ),
 				'section'    => 'colors',
 				'settings'   => 'accent_color_2'
 			)
 		)
 	);
 
-	$wp_customize->add_section( 'burger_factory_copy' , array(
-		'title'      => __( 'Copy', 'burger-factory' ),
+	$wp_customize->add_section( 'grapefruit_stand_copy' , array(
+		'title'      => __( 'Copy', 'grapefruit-stand' ),
 		'priority'   => 30,
 	) );
 
 	$wp_customize->add_setting( 'footer_copy', array(
-		'default'     => __( 'Made With Love Somewhere On Earth' , 'burger-factory'),
+		'default'     => __( 'Made With Love Somewhere On Earth' , 'grapefruit-stand'),
 		'transport'   => 'postMessage',
-		'sanitize_callback' => 'burger_factory_filter_most_tags'
+		'sanitize_callback' => 'grapefruit_stand_filter_most_tags'
 	));
 
 	$wp_customize->add_control(
@@ -89,15 +89,15 @@ function burger_factory_customize_register( $wp_customize ) {
 			$wp_customize,
 			'footer_copy',
 			array(
-				'label'       => __( "Footer Copy", 'burger-factory' ),
-				'description' => __( "Appears at the bottom of every page.", 'burger-factory' ),
-				'section'     => 'burger_factory_copy',
+				'label'       => __( "Footer Copy", 'grapefruit-stand' ),
+				'description' => __( "Appears at the bottom of every page.", 'grapefruit-stand' ),
+				'section'     => 'grapefruit_stand_copy',
 				'settings'    => 'footer_copy'
 			)
 		)
 	);
 }
-add_action( 'customize_register', 'burger_factory_customize_register' );
+add_action( 'customize_register', 'grapefruit_stand_customize_register' );
 
 /**
  * Filter for text edits to filter out most html elements but leave a few like links and formatting
@@ -107,7 +107,7 @@ add_action( 'customize_register', 'burger_factory_customize_register' );
  * @param  string $string
  * @return string
  */
-function burger_factory_filter_most_tags($string) {
+function grapefruit_stand_filter_most_tags($string) {
 	$allowedtags = array(
 		'a' => array(
 			'href' => true,
@@ -142,7 +142,7 @@ function burger_factory_filter_most_tags($string) {
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function burger_factory_customize_preview_js() {
-	wp_enqueue_script( 'burger_factory_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170220', true );
+function grapefruit_stand_customize_preview_js() {
+	wp_enqueue_script( 'grapefruit_stand_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20170220', true );
 }
-add_action( 'customize_preview_init', 'burger_factory_customize_preview_js' );
+add_action( 'customize_preview_init', 'grapefruit_stand_customize_preview_js' );

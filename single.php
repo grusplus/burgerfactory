@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Burger_Factory
+ * @package Grapefruit_Stand
  */
 
 get_header(); ?>
@@ -27,8 +27,8 @@ get_header(); ?>
 					<header class="entry-header">
 						<?php if ( 'post' === get_post_type() ) : ?>
 						<div class="entry-meta">
-							<?php burger_factory_posted_on(); ?>
-							<?php burger_factory_entry_category(); ?>
+							<?php grapefruit_stand_posted_on(); ?>
+							<?php grapefruit_stand_entry_category(); ?>
 						</div><!-- .entry-meta -->
 						<?php
 						endif; ?>
@@ -51,19 +51,19 @@ get_header(); ?>
 						<?php endif;
 							the_content( sprintf(
 								/* translators: %s: Name of current post. */
-								wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'burger-factory' ), array( 'span' => array( 'class' => array() ) ) ),
+								wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'grapefruit-stand' ), array( 'span' => array( 'class' => array() ) ) ),
 								the_title( '<span class="screen-reader-text">"', '"</span>', false )
 							) );
 
 							wp_link_pages( array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'burger-factory' ),
+								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'grapefruit-stand' ),
 								'after'  => '</div>',
 							) );
 						?>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-footer">
-						<?php burger_factory_entry_footer(); ?>
+						<?php grapefruit_stand_entry_footer(); ?>
 					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->
 

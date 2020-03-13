@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Burger_Factory
+ * @package Grapefruit_Stand
  */
 
 get_header(); ?>
@@ -12,18 +12,16 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main row" role="main">
 
-		<div class="col-3 sidebar">
-			<?php get_sidebar(); ?>
-		</div>
+		<div class="col-12 archive-entry-list">
 
-		<div class="col-9 archive-entry-list">
-
-		<?php if ( have_posts() ) : ?>
+        <?php if ( is_front_page() && is_home()) : ?>
+            <?php the_content(esc_html__( 'More', 'grapefruit-stand' )); ?>
+		<?php elseif ( have_posts() ) : ?>
 
 			<?php if ( is_search() ) : ?>
 				<header class="page-header">
 					<h1 class="front-page-category">
-						<?php printf( esc_html__( 'Search Results for: %s', 'burger-factory' ), '<span>' . get_search_query() . '</span>' ); ?>
+						<?php printf( esc_html__( 'Search Results for: %s', 'grapefruit-stand' ), '<span>' . get_search_query() . '</span>' ); ?>
 					</h1>
 				</header>
 			<?php elseif ( is_archive() ): ?>
@@ -51,14 +49,14 @@ get_header(); ?>
 							</h2>
 							<?php if ( 'post' === get_post_type() ) : ?>
 							<div class="entry-meta">
-								<?php burger_factory_entry_category(); ?>
+								<?php grapefruit_stand_entry_category(); ?>
 							</div>
 							<?php endif; ?>
 						</header>
 
 						<div class="entry-summary">
 							<?php if ( ! has_excerpt() && !is_search() ) :
-								the_content(esc_html__( 'More', 'burger-factory' ));
+								the_content(esc_html__( 'More', 'grapefruit-stand' ));
 								wp_link_pages();
 							else :
 								the_excerpt();
@@ -77,24 +75,24 @@ get_header(); ?>
 
 			<section class="no-results not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'burger-factory' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'grapefruit-stand' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
 					<?php
 					if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-						<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'burger-factory' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+						<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'grapefruit-stand' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 					<?php elseif ( is_search() ) : ?>
 
-						<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'burger-factory' ); ?></p>
+						<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'grapefruit-stand' ); ?></p>
 						<?php
 							get_search_form();
 
 					else : ?>
 
-						<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'burger-factory' ); ?></p>
+						<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'grapefruit-stand' ); ?></p>
 						<?php
 							get_search_form();
 
@@ -102,6 +100,10 @@ get_header(); ?>
 				</div><!-- .page-content -->
 			</section><!-- .no-results -->
 		<?php endif; ?>
+		</div>
+
+		<div class="col-12 sidebar">
+			<?php get_sidebar(); ?>
 		</div>
 
 		</main><!-- #main -->

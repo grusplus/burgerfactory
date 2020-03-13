@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Burger_Factory
+ * @package Grapefruit_Stand
  */
 
 get_header(); ?>
@@ -18,11 +18,11 @@ get_header(); ?>
 
 			<section class="col-9 error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( "404", 'burger-factory' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( "404", 'grapefruit-stand' ); ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( "There's no page at this address.", 'burger-factory' ); ?></p>
+					<p><?php esc_html_e( "There's no page at this address.", 'grapefruit-stand' ); ?></p>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 		</main><!-- #main -->

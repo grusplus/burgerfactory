@@ -1,4 +1,4 @@
-=== Burger Factory ===
+=== Grapefruit Stand ===
 
 Contributors: Angus Woodman
 Tags: two-columns, left-sidebar, featured-images, sticky-post, threaded-comments, translation-ready, blog
@@ -24,8 +24,8 @@ and content on the single page, and are styled differently like a subtitle.
 
 == Copyright ==
 
-Burger Factory WordPress Theme, Copyright 2017-2018 Angus Woodman
-Burger Factory is distributed under the terms of the GNU GPL
+Grapefruit Stand WordPress Theme, Copyright 2017-2018 Angus Woodman
+Grapefruit Stand is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -37,10 +37,10 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Burger Factory WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
+Grapefruit Stand WordPress Theme is derived from Underscores WordPress Theme, Copyright 2013 Automattic, Inc.
 Underscores WordPress Theme is distributed under the terms of the GNU GPL
 
-Burger Factory Theme bundles the following third-party resources:
+Grapefruit Stand Theme bundles the following third-party resources:
 
 normalize.css (C) 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
