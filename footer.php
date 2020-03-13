@@ -20,17 +20,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer row" role="contentinfo">
+		<div class="site-info">
+            <div class='col-6'>
 				<?php if ( is_front_page() && is_home() ) : ?>
-                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">&copy; <?php bloginfo( 'name' ); ?></a></h1>
 				<?php else : ?>
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">&copy; <?php bloginfo( 'name' ); ?></a></p>
                 <?php endif; ?>
-
-		<div class="col-3">
-		</div>
-		<div class="col-9 site-info">
-			<p><?php echo get_theme_mod( 'footer_copy' ); ?></p>
-			<p class="theme-by really-small"><?php echo __( '<a href="https://anguswoodman.com/simple-wordpress-themes" rel="designer">Theme by Angus Woodman</a>', 'grapefruit-stand' ); ?></p>
+            </div>
+            <div class='col-6' style="text-align:right">
+                <p class="tertiary-text">"What is over leaves its best bits with you, but what never begins leaves its worst."</p>
+            </div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

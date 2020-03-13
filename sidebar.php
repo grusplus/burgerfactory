@@ -8,10 +8,15 @@
  */
 
 ?>
-<nav id="site-navigation" class="main-navigation" role="navigation">
-    <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-</nav><!-- #site-navigation -->
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+
+<div class="sidebar row">
+    <div class="col-6">
+        <aside id="secondary" class="widget-area" role="complementary">
+            <?php dynamic_sidebar( 'sidebar-1' ); ?>
+        </aside><!-- #secondary -->
+    </div>
+    <div class="col-6" style="text-align:left;">
+        <p class="tertiary-text"><?php echo get_theme_mod( 'footer_copy' ); ?></p>
+    </div><!-- .site-info -->
+</div>

@@ -810,7 +810,10 @@ textarea {
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar {
-	padding:0px 0 0px 0px;
+	padding:24px 0 0px 0px;
+	text-align: left;
+    font-size:12px;
+    border-top:1px solid #eee;
 }
 
 .sidebar ul,
@@ -824,6 +827,19 @@ textarea {
 	padding: 0;
 	text-align: center;
 }
+
+.sidebar .widget{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    margin-right:100px;
+    max-width: 50%;
+}
+
+.sidebar .widget:last-child{
+    margin-right:0;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation
@@ -878,7 +894,7 @@ nav .current-menu-item>a{
 }
 
 .menu ul>li {
-	margin-top:10px;
+	margin-top:8px;
 }
 
 .menu li{
@@ -892,8 +908,9 @@ nav .current-menu-item>a{
 }
 
 .menu li ul li{
-	font-size: 14px;
-	line-height: 22px;
+	font-size: 12px;
+	line-height: 18px;
+	margin-left:10px;
 }
 
 .top-navigation {
@@ -1274,16 +1291,18 @@ p.site-description{
 # Widgets
 --------------------------------------------------------------*/
 .numeral-item-container{
+    position:relative;
     border-left: 1px solid #ccc;
     margin-left:-24px;
     padding-left:24px;
+    margin-bottom:120px;
 }
 .numeral{
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    top: 32px;
-    left: -24px;
+    top: -4px;
+    left: -71px;
     width: 50px;
     text-align: right;
 }

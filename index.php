@@ -102,11 +102,6 @@ get_header(); ?>
 		<?php endif; ?>
 		</div>
 
-		<div class="col-12 sidebar">
-			<?php get_sidebar(); ?>
-		</div>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<?php
-get_footer();
+<?php get_footer(); ?>
