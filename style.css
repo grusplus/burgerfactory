@@ -938,12 +938,17 @@ nav .current-menu-item>a{
 }
 
 .top-navigation a{
-	color:#888;
+	color:#888 !important;
 	border-bottom:0;
 }
 
+.top-navigation a:hover, .top-navigation a:active{
+    color:#383838 !important;
+	border-bottom:0px solid #ccc;
+}
+
 .top-navigation .current-menu-item a{
-	color:#000;
+	color:#383838 !important;
 	font-weight:800;
 	border-bottom:0;
 }
@@ -1195,6 +1200,7 @@ a.more-link{
 .site-header{
 	margin:24px 0 24px 0px;
 	text-align:center;
+    position:relative;
 }
 
 .site-title{
@@ -1224,6 +1230,7 @@ p.site-description{
 	font-weight:800 !important;
 	letter-spacing:-0.02em;
 }
+
 
 .single p.site-description {
 }
@@ -1456,14 +1463,26 @@ ul.entry-list-condensed li ul{
 .page-content,
 .entry-content,
 .entry-summary {
-	font-size: 18px;
-	line-height: 1.5;
+	font-size: 16px;
+	line-height: 24px;
 	margin: 1.5em 0 0;
 }
 
 .entry-content{
 	margin-top:0px;
+	position:relative;
 }
+
+.entry-app-icon{
+}
+
+.entry-app-icon img{
+	position:absolute;
+	bottom:100%;
+    width:32px;
+    margin-bottom:76px;
+}
+
 
 .page-links {
 	clear: both;
@@ -1473,6 +1492,10 @@ ul.entry-list-condensed li ul{
 .post-thumbnail img{
 	border-radius:4px;
 	margin-bottom:36px;
+}
+
+.entry-header{
+    margin-top:140px;
 }
 
 .entry-title{
@@ -1517,6 +1540,7 @@ ul.entry-list-condensed li ul{
 .entry-content h3 {
 	margin-top:48px;
 	font-size:28px;
+	line-height:38px;
 }
 
 .entry-content h4 {

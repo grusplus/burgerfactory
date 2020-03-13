@@ -12,10 +12,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             <div class="row">
-                <div class="col-1">
+                <div class="col-3">
                 &nbsp;
                 </div>
-                <div class="col-10">
+                <div class="col-6">
                     <?php
                     while ( have_posts() ) : the_post();
                     ?>
