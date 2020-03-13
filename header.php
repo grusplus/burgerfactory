@@ -27,7 +27,7 @@
 
 <body <?php body_class( get_theme_mod( 'color_scheme', 'color-scheme-light' )); ?>>
 	<div id="site-wrapper">
-	<div id="page" class="site container">
+	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'grapefruit-stand' ); ?></a>
 
 		<header id="masthead" class="row site-header" role="banner">
@@ -39,7 +39,7 @@
 				<?php if ( is_front_page() ) :
                     $description = get_bloginfo( 'description', 'display' );
                     if ( $description || is_customize_preview() ) : ?>
-                        <p class="site-description">
+                        <p class="site-description lede">
                             <?php echo substr($description, 0, strpos($description, ".") + 1); /* WPCS: xss ok. */ ?>
                             <span class="highlight"><?php echo substr($description, strpos($description, ".") + 1); /* WPCS: xss ok. */ ?></span>
                         </p>

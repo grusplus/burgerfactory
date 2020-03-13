@@ -102,7 +102,7 @@ abbr[title] {
 
 b,
 strong {
-	font-weight:500;
+	font-weight:800;
 }
 
 dfn {
@@ -114,7 +114,7 @@ h1 {
 	line-height:40px;
 	margin-top:0px;
 	margin-bottom:8px;
-	font-weight:500;
+	font-weight:800;
 }
 
 mark {
@@ -249,7 +249,7 @@ textarea {
 }
 
 optgroup {
-	font-weight:500;
+	font-weight:800;
 }
 
 table {
@@ -521,7 +521,7 @@ dd{
 }
 
 .color-scheme-light hr {
-	background-color: #c3c3c9;
+	background-color: #eaeaea;
 }
 
 .color-scheme-light input,
@@ -565,7 +565,7 @@ h6,
 p.site-title,
 p.site-description {
 	clear: both;
-	font-weight:500;
+	font-weight:800;
 }
 
 p {
@@ -722,7 +722,7 @@ li > ol {
 }
 
 dt {
-	font-weight:500;
+	font-weight:800;
 }
 
 dd {
@@ -806,6 +806,10 @@ textarea {
 	max-width:100%;
 }
 
+.store-badges a{
+    border:0;
+}
+
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
@@ -869,7 +873,7 @@ p a img{
 nav .current_page_item>a,
 nav .current-menu-item>a{
 	border-bottom-width:0 !important;
-	font-weight:500;
+	font-weight:800;
 }
 
 /*--------------------------------------------------------------
@@ -940,7 +944,7 @@ nav .current-menu-item>a{
 
 .top-navigation .current-menu-item a{
 	color:#000;
-	font-weight:500;
+	font-weight:800;
 	border-bottom:0;
 }
 
@@ -972,6 +976,9 @@ nav .current-menu-item>a{
 
 }
 
+.banner-row {
+    text-align:center;
+}
 
 
 .sidebar a, .sidebar p {
@@ -1062,7 +1069,7 @@ nav .current-menu-item>a{
 	text-transform:uppercase;
 	color:#999;
 	font-size:12px;
-	font-weight:500;
+	font-weight:800;
 }
 
 .posts-navigation .nav-previous {
@@ -1113,7 +1120,7 @@ a.more-link{
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight:500;
+	font-weight:800;
 	height: auto;
 	left: 5px;
 	line-height: normal;
@@ -1130,7 +1137,7 @@ a.more-link{
 }
 
 /*--------------------------------------------------------------
-# Alignments
+# Alignments & Margins
 --------------------------------------------------------------*/
 .alignleft {
 	display: inline;
@@ -1150,6 +1157,8 @@ a.more-link{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
 
 /*--------------------------------------------------------------
 # Clearings
@@ -1192,7 +1201,7 @@ a.more-link{
 	margin-top:0;
 	margin-bottom:0;
 	font-size:20px;
-	font-weight:500;
+	font-weight:800;
 	line-height:1.5;
 }
 
@@ -1204,11 +1213,15 @@ body .site-title a{
 }
 
 p.site-description{
+	display:inline-block;
+}
+
+.lede{
+    text-align: center;
 	margin:48px 0;
 	font-size:36px;
 	line-height:42px;
-	display:inline-block;
-	font-weight:800;
+	font-weight:800 !important;
 	letter-spacing:-0.02em;
 }
 
@@ -1299,7 +1312,7 @@ p.site-description{
 }
 .numeral{
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 800;
     position: absolute;
     top: -4px;
     left: -71px;
@@ -1311,8 +1324,8 @@ p.site-description{
     line-height: 26px;
 }
 .secondary-text{
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 20px;
 }
 .tertiary-text{
     font-size: 10px;
@@ -1390,7 +1403,7 @@ ul.entry-list-condensed li ul{
 
 .entry-list-condensed-meta{
 	font-size:12px;
-	font-weight:500;
+	font-weight:800;
 	white-space:pre;
 	color:#999;
 	text-transform:uppercase;
@@ -1398,7 +1411,7 @@ ul.entry-list-condensed li ul{
 
 .entry-list-condensed-meta a{
 	font-size:12px;
-	font-weight:500;
+	font-weight:800;
 	white-space:pre;
 	color:#999;
 	text-transform:uppercase;
@@ -1482,7 +1495,7 @@ ul.entry-list-condensed li ul{
 .single .entry-meta, .single .entry-meta a{
 	text-decoration:none;
 	border:0;
-	font-weight:500;
+	font-weight:800;
 }
 
 .single .posted-on{
@@ -1514,7 +1527,7 @@ ul.entry-list-condensed li ul{
 .tag-links{
 	font-size:12px;
 	text-transform:uppercase;
-	font-weight:500;
+	font-weight:800;
 	color:#999;
 }
 
@@ -1705,6 +1718,34 @@ object {
 	display: block;
 }
 
+/*--------------------------------------------------------------
+# App Pages
+--------------------------------------------------------------*/
+#primary .app-description{
+    margin-top:50px;
+}
+
+.features{
+}
+.feature{
+}
+
+.features-divider{
+    margin: 80px 40%;
+}
+
+.feature-image{
+    text-align:center;
+}
+
+.end-note{
+    text-align:center;
+    margin:120px 0;
+}
+.end-note .big-emoji{
+    font-size:128px;
+    opacity:0.1;
+}
 
 /*--------------------------------------------------------------
 # Error
