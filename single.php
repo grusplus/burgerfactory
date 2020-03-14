@@ -8,28 +8,13 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main row" role="main">
-		<div class="col-3 sidebar">
-			<?php get_sidebar(); ?>
-		</div>
-		<div class="col-9">
 			<?php
 			while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<div class="post-thumbnail">
-						<?php the_post_thumbnail(); ?>
-					</div><!-- .post-thumbnail -->
-
 					<header class="entry-header">
 						<?php if ( 'post' === get_post_type() ) : ?>
-						<div class="entry-meta">
-							<?php grapefruit_stand_posted_on(); ?>
-							<?php grapefruit_stand_entry_category(); ?>
-						</div><!-- .entry-meta -->
 						<?php
 						endif; ?>
 						<?php
@@ -39,13 +24,21 @@ get_header(); ?>
 							the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 						endif;
 
-					?></header><!-- .entry-header -->
+					?>
+                        <div class="entry-meta">
+						</div><!-- .entry-meta -->
+
+                    </header><!-- .entry-header -->
+
+					<div class="post-thumbnail">
+						<?php the_post_thumbnail(); ?>
+					</div><!-- .post-thumbnail -->
 
 					<div class="entry-content">
 						<?php if ( has_excerpt() ) : ?>
 							<p class="intro">
 								<?php /* Not using the_excerpt() here because we're also outputting the
-								     content and we don't want after post hooks firing twice. */ ?>
+								     content and we don't want afterPost hooks firing twice. */ ?>
 								<?php echo get_the_excerpt(); ?>
 							</p>
 						<?php endif;
@@ -63,6 +56,12 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-footer">
+                        <div class="entry-meta">
+                            <strong>&bull;<br><br></strong>
+                            <div class="tertiary-text" style="font-weight:normal">Originally posted on
+                                <?php grapefruit_stand_posted_on(); ?>
+                            </div>
+                        </div><!-- .entry-meta -->
 						<?php grapefruit_stand_entry_footer(); ?>
 					</footer><!-- .entry-footer -->
 				</article><!-- #post-## -->
@@ -78,15 +77,14 @@ get_header(); ?>
 						<?php dynamic_sidebar( 'after-entry' ); ?>
 					</div>
 				<?php
-				endif;
+				endif; ?>
 
-				the_post_navigation();
+
+                <?php
+
+				//the_post_navigation();
 
 			endwhile; // End of the loop.
 			?>
-		</div>
-		</main><!-- #main -->
-
-	</div><!-- #primary -->
 <?php
 get_footer();

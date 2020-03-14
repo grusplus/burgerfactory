@@ -34,8 +34,8 @@
 			<div class="col-12 top-navigation">
                 <?php echo wp_nav_menu(array('menu'=>'top')); ?>
             </div>
-			<div class="col-1"></div>
-			<div class="col-10">
+			<div class="col-3"></div>
+			<div class="col-6">
 				<?php if ( is_front_page() ) :
                     $description = get_bloginfo( 'description', 'display' );
                     if ( $description || is_customize_preview() ) : ?>
@@ -56,3 +56,10 @@
                 dynamic_sidebar( 'before-content' );
                 ?></div></div><?php
             endif; ?>
+            	<div id="primary" class="content-area">
+                <main id="main" class="site-main container" role="main">
+                    <div class="row">
+                        <div class="col-2">
+                        &nbsp;
+                        </div>
+                        <div class="col-9">

@@ -988,7 +988,7 @@ nav .current-menu-item>a{
 
 .sidebar a, .sidebar p {
 	text-decoration: none;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 .main-navigation ul ul {
@@ -1489,9 +1489,14 @@ ul.entry-list-condensed li ul{
 	margin: 0 0 1.5em;
 }
 
+.post-thumbnail{
+    margin-bottom: -12px;
+}
+
 .post-thumbnail img{
 	border-radius:4px;
-	margin-bottom:36px;
+	margin-bottom: 24px;
+	margin-top: 6px;
 }
 
 .entry-header{
@@ -1522,13 +1527,12 @@ ul.entry-list-condensed li ul{
 }
 
 .single .posted-on{
-	float:right;
 }
 
 .intro{
 	font-size:22px;
 	line-height:1.4em;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 
@@ -1571,7 +1575,7 @@ div div.sharedaddy h3.sd-title{
 }
 
 .post .entry-footer{
-	padding: 0px 0 60px 0;
+	padding: 0px 0 0px 0;
 }
 
 

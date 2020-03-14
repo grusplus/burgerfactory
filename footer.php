@@ -11,6 +11,14 @@
 
 ?>
 
+                </div>
+            </div>
+            <?php get_sidebar(); ?>
+		</main><!-- #main -->
+
+
+	</div><!-- #primary -->
+
         <?php if ( is_active_sidebar( 'after-content' ) ) :
             ?><div class="after-content-widgets"><?php
             dynamic_sidebar( 'after-content' );
