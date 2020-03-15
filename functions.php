@@ -168,10 +168,16 @@ function grapefruit_stand_dynamic_css() {
 				content: "<?php echo __('Next', 'grapefruit-stand'); ?>";
 			}
 
-			p.site-description .highlight, .intro { color: <?php echo get_theme_mod( 'accent_color_1', '#952637' ); ?>; }
+			p.site-description .highlight, .highlight, .intro { color: <?php echo get_theme_mod( 'accent_color_1', '#952637' ); ?>; }
 			.sticky { border-left-color: <?php echo get_theme_mod( 'accent_color_1', '#952637' ); ?>; }
 
-			.front-page-category, .single .entry-meta, .single .entry-meta a { color: <?php echo get_theme_mod( 'accent_color_2', '#BB7243' ); ?>; }
+			.front-page-category, .single .entry-meta, .single .entry-meta a, .highlight-2 {
+                color: <?php echo get_theme_mod( 'accent_color_2', '#BB7243' ); ?>;
+            }
+			#mc_embed_signup .button{
+                background-color: <?php echo get_theme_mod( 'accent_color_2', '#BB7243' ); ?>;
+                color:#fff;
+            }
 		</style>
 	<?php
 }

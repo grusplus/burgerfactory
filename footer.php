@@ -13,7 +13,6 @@
 
                 </div>
             </div>
-            <?php get_sidebar(); ?>
 		</main><!-- #main -->
 
 
@@ -27,6 +26,7 @@
 
 	</div><!-- #content -->
 
+    <?php get_sidebar(); ?>
 	<footer id="colophon" class="site-footer row" role="contentinfo">
 		<div class="site-info">
             <div class='col-6'>

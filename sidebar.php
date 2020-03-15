@@ -10,7 +10,7 @@
 ?>
 
 
-<div class="container">
+<div class="containerr">
     <div class="sidebar row">
         <div class="col-6">
             <aside id="secondary" class="widget-area" role="complementary">
