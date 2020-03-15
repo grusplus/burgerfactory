@@ -51,7 +51,7 @@
             	<div id="primary" class="content-area">
                 <main id="main" class="site-main container" role="main">
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-1">
                         &nbsp;
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
