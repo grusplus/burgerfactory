@@ -12,13 +12,10 @@
 
 <div class="containerr">
     <div class="sidebar row">
-        <div class="col-6">
+        <div class="col-12">
             <aside id="secondary" class="widget-area" role="complementary">
                 <?php dynamic_sidebar( 'sidebar-1' ); ?>
             </aside><!-- #secondary -->
         </div>
-        <div class="col-6" style="text-align:left;">
-            <p class="tertiary-text"><?php echo get_theme_mod( 'footer_copy' ); ?></p>
-        </div><!-- .site-info -->
     </div>
 </div>

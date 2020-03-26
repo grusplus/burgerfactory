@@ -11,12 +11,12 @@
 
 ?>
 
-                </div>
-            </div>
-		</main><!-- #main -->
+                    </div><!-- #col-10 -->
+                </div><!-- #row -->
+		    </main><!-- #main -->
 
 
-	</div><!-- #primary -->
+	    </div><!-- #primary -->
 
         <?php if ( is_active_sidebar( 'after-content' ) ) :
             ?><div class="after-content-widgets"><?php
@@ -37,11 +37,12 @@
                 <?php endif; ?>
             </div>
             <div class='col-6' style="text-align:right">
-                <p class="tertiary-text">"What is over leaves its best bits with you, but what never begins leaves its worst."</p>
+                <p class="tertiary-text"><em><?php echo get_theme_mod( 'footer_copy' ); ?></em></p>
             </div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+</div><!-- #site-wrapper -->
 
 <?php wp_footer(); ?>
 

@@ -18,8 +18,9 @@ get_header(); ?>
             <div id="mc_embed_signup_scroll" class="row">
                 <div class="col-9" style="margin-left:0px">
                     <input id="mce-EMAIL" class="email" name="EMAIL" required="" type="email" value="" placeholder="email address" /><br /><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <p class="tertiary-text" style="text-align:left;margin-bottom:0">Join hundreds of other folks getting updates about my projects and reading about my ups and downs and sidewayses to feel better about themselves probably.</p>
                 </div>
-                <div class="col-3">
+                <div class="col-3" style="margin-left:0px">
                     <input id="mc-embedded-subscribe" class="button" name="subscribe" type="submit" value="Subscribe" />
                 </div>
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input tabindex="-1" name="b_ddcd6401ab841f18f21d67bc8_51d750bc51" type="text" value="" />
@@ -27,17 +28,15 @@ get_header(); ?>
             </div>
         </form>
     </div>
-    <p class="tertiary-text">Join 500+ other folks getting updates about my projects and reading about my ever-deteriorating mental health so they can feel better about themselves probably.</p>
-    <!--End mc_embed_signup-->
-    <p class="secondary-text">I also put some words on <a href="https://medium.com/angusw" target="_blank" rel="noopener noreferrer">Medium</a> from time to time.</p>
+    <!-- <p class="secondary-text">I also put some words on <a href="https://medium.com/angusw" target="_blank" rel="noopener noreferrer">Medium</a> from time to time.</p> -->
     </div>
 </div>
 
 <div class="numeral-item-container">
     <div class="numeral">ii.</div>
-    <p class="primary-text"><a href="/grapefruit">Grapefruit</a> is a privacy-first app for tracking your moods, keeping a journal, and managing your mental health. Unlike other apps which track your every move, Grapefruit has no login, no tracking scripts, and no server somewhere holding on to all of your data for all of eternity. It’s as private as your device is. So you never have to worry about your most private data being hacked, or using your intimate thoughts to sell you something.</p>
+    <p class="primary-text"><a href="/grapefruit">Grapefruit</a> is a highly-customizable, privacy-first app for tracking your moods, keeping a journal, and managing your mental health. I wanted to make an app that can be really customized to match your unique situation. And one that doesn't track you, has no login, doesn't use tracking scripts, and doesn't have a server somewhere holding on to all of your data. <br><br>The things we write and experience can be very personal, so we need a customized experience and it just didn't feel right for that information to live anywhere but our own computers.</p>
     <div class="numeral-image">
-        <a href="/grapefruit" class="stealth"><img src="https://haveagrapefruit.s3.amazonaws.com/img/banner.jpg" style="max-width:660px;"></a>
+        <a href="/grapefruit" class="stealth"><img src="https://haveagrapefruit.s3.amazonaws.com/img/banner.jpg" style="max-width:660px;width:100%;"></a>
     </div>
     <div class="store-badges">
         <a href="https://itunes.apple.com/us/app/grapefruit-journal/id1453330205?ls=1&mt=8" style='text-decoration:none'>
@@ -57,18 +56,19 @@ get_header(); ?>
 
 <div class="numeral-item-container">
     <div class="numeral">iii.</div>
-    <p class="primary-text"><a href="/count-your-money">Count Your Money</a> is an app to add a little financial responsibility to your life, but not too much. Just want an easy way to keep a high-level view of your money? No budgets, no spreadsheets. Just count your money. It’s called Count Your Money and it's a great way to start your financial journey.</p>
+    <p class="primary-text"><a href="/count-your-money">Count Your Money</a> is a super-simple app for keeping track of you money and making sure you're on track for retirement.
+    I wanted to create an app that mirrors my own process -- a very simple way to keep a high-level view of your money. I don't use budgets or spreadsheets. I just count my money and plot the trends.</p>
     <div class="numeral-image">
-        <a href="/grapefruit" class="stealth"><img src="https://haveagrapefruit.s3.amazonaws.com/img-cym/banner.jpg" style="max-width:660px;"></a>
+        <a href="/grapefruit" class="stealth"><img src="https://haveagrapefruit.s3.amazonaws.com/img-cym/banner.jpg" style="max-width:660px;width:100%"></a>
     </div>
     <div class="coming-soon">
-        <p>Coming Soon. Sign up above for updates.</p>
+        <p class="secondary-text">Count Your Money will be released very soon for macOS and Windows. Sign up to the email list above for updates.</p>
     </div>
 </div>
 
 <div class="numeral-item-container">
     <div class="numeral">iv.</div>
-    <p class="primary-text">Number four on this list still doesn't have a name. Or screenshots or excerpts. I'm working on a few concepts, but I wanna create something more <em>fun</em> and maybe a little pointless for pure creativity's sake. I'll be writing about it for the newsletter though, so sign up if you're curious about <em>The Mystery Fourth Project</em>.</p>
+    <p class="primary-text">The fourth item I want to put on this list still doesn't have a name. Or screenshots or graphics to show off. I'm working on a few concepts, but I wanna create something more <span class="highlight">f</span><span class="highlight-2">u</span><span class="highlight">n</span>. And maybe a little pointless for pure creativity's sake. I'll probably be writing about it to the email list if you're curious.</p>
 </div>
 
 <div class="numeral-item-container">
@@ -76,21 +76,24 @@ get_header(); ?>
     <p class="primary-text">And this is where I'm totally going to cheat and use the last item to list out everything else that doesn't get a full numeral.</p>
     <ul class="small-projects-list">
         <li>
-            <a href="">Follow me on Twitch</a>
+            <a href="https://www.twitch.tv/gutterbag">Follow me on Twitch</a>
             <span>where I'll be streaming some wildly unpopular games from time to time.</span>
         </li>
         <li>
+            <span>I don't have anything else to put here right. So I think this list format turned out to be a bit of premature optimization.</span>
+        </li>
+        <li style="display:none;">
             <a href="">Join my Discord chat</a>
             <span>where we can chat or play games together.</span>
         </li>
-        <li>
+        <li style="display:none;">
             Starting in the summer, I'm thinking about experimenting with some standing video call slots, so anyone can book a call.
             I used to do these with a mentorship program and had some really great convos. I'll send out more info to the email list when I sort it out.
         </li>
     </ul>
 </div>
 
-<p class="primary-text" style="margin-bottom:120px;">
+<p class="primary-text" style="margin-bottom:120px;display:none;">
     And if none of that interests, you, well, <a href="/its-okay-relax/">it's okay</a>.
 </p>
 

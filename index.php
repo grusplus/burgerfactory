@@ -27,17 +27,24 @@ get_header(); ?>
 			<?php elseif ( is_archive() ): ?>
 				<header class="page-header">
 				<?php
-				the_archive_title( '<h1 class="front-page-category">', '</h1>' );
+				the_archive_title( '<h1 class="front-page-category">Hey Now', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 				</header><!-- .page-header -->
+			<?php else: ?>
+				<h4>Articles From 2016-2019</h4>
+                <p class="secondary-text">
+                    From 2016 to 2019 I wrote a weekly-ish blog on a little bit of everything. The most common topics
+                    were mental health, personal improvement and finance. There was also a bit of whaaaaaaat mixed in. These
+                    are all the articles.
+                </p>
 			<?php endif; ?>
 
 			<div class="entry-list">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							<h2 class="entry-title">
+						<header>
+							<p>
 							<?php
 							$title = get_the_title();
 							if( !empty( $title ) ) :
@@ -46,23 +53,14 @@ get_header(); ?>
 								echo sprintf( '<a href="%s" rel="bookmark">', esc_url( get_permalink() ) ) . "Untitled" . '</a>';
 							endif;
 							?>
-							</h2>
-							<?php if ( 'post' === get_post_type() ) : ?>
-							<div class="entry-meta">
-								<?php grapefruit_stand_entry_category(); ?>
-							</div>
+                                <?php if ( 'post' === get_post_type() ) : ?>
+                                <span class="tertiary-text" style="margin-left:10px;">
+                                    <?php grapefruit_stand_posted_on(); ?>
+                                    &bull; <?php grapefruit_stand_entry_category(); ?>
+                                </span>
+							</p>
 							<?php endif; ?>
 						</header>
-
-						<div class="entry-summary">
-							<?php if ( ! has_excerpt() && !is_search() ) :
-								the_content(esc_html__( 'More', 'grapefruit-stand' ));
-								wp_link_pages();
-							else :
-								the_excerpt();
-							endif;
-							?>
-						</div>
 					</article>
 				<?php endwhile; ?>
 			</div>

@@ -12,9 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
-
-
-
 </head>
 
 <body <?php body_class( get_theme_mod( 'color_scheme', 'color-scheme-light' )); ?>>
@@ -26,8 +23,7 @@
 			<div class="col-12 top-navigation">
                 <?php echo wp_nav_menu(array('menu'=>'top')); ?>
             </div>
-			<div class="col-3"></div>
-			<div class="col-6">
+			<div class="col-12">
 				<?php if ( is_front_page() ) :
                     $description = get_bloginfo( 'description', 'display' );
                     if ( $description || is_customize_preview() ) : ?>

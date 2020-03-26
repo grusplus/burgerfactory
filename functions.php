@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'grapefruit_stand_widgets_init' );
  * Enqueue scripts and styles.
  */
 function grapefruit_stand_scripts() {
-	wp_enqueue_style( 'grapefruit-stand-fonts', '//fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i' );
+	wp_enqueue_style( 'grapefruit-stand-fonts', '//fonts.googleapis.com/css?family=Inter:300,400,800' );
 	wp_enqueue_style( 'grapefruit-stand-style', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
